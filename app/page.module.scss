@@ -1,0 +1,90 @@
+$color-line: #06c755;
+$color-youtube: #ff0000;
+$color-twitter: #1da1f2;
+$color-instagram: #e1306c;
+$color-darker: #333;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: var(--font-noto-sans-jp);
+}
+
+.title {
+  font-size: 4rem;
+  display: inline-block;
+  background-image: url('/gradation.webp');
+  background-size: cover;
+  background-clip: text;
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.2rem;
+  margin-top: 0;
+}
+
+.text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  margin-top: 0;
+  color: $color-darker;
+}
+
+.sns {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.snsIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > a {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+%icon {
+  font-size: 2.5rem;
+  color: $color-darker;
+  transition: color 0.3s ease;
+}
+
+.youtube {
+  @extend %icon;
+
+  &:hover {
+    color: $color-youtube;
+  }
+}
+
+.twitter {
+  @extend %icon;
+
+  &:hover {
+    color: $color-twitter;
+  }
+}
+
+.instagram {
+  @extend %icon;
+
+  &:hover {
+    color: $color-instagram;
+  }
+}
+
+.line {
+  @extend %icon;
+
+  &:hover {
+    color: $color-line;
+  }
+}
