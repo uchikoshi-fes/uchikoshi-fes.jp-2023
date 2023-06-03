@@ -9,10 +9,29 @@
     "import/order": [
       "error",
       {
+        "groups": ["builtin", "external", "parent", "sibling", "index", "object", "type"],
+        "pathGroups": [
+          {
+            "pattern": "{react,next/**, next}",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "@components/**",
+            "group": "parent",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin", "object"],
         "alphabetize": {
           "order": "asc"
         }
       }
     ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": { "project": "./" }
+    }
   }
 }
