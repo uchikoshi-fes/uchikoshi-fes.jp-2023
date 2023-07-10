@@ -23,9 +23,7 @@
     repeatCount="1"
     begin="0s"
     fill="freeze"
-    calcMode="spline"
-    keyTimes="0;1"
-    keySplines="0.215, 0.610, 0.355, 1.000"
+    calcMode="linear"
   />
 <g id="layer-1" mask="url(#layer-2)">
 	<g>
