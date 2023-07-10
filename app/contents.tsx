@@ -1,5 +1,5 @@
 'use client'
-import Image from 'next/image'
+
 import { useState, ReactNode, useRef, useEffect } from 'react'
 import { useInView } from 'framer-motion'
 import styles from './contents.module.scss'
