@@ -1,0 +1,27 @@
+$color-top: #ffffff;
+$color-slogan: #e53242;
+
+.topColor {
+  background-color: $color-top;
+  color: white;
+  transition: all 1s ease-out;
+}
+.sloganColor {
+  background-color: $color-slogan;
+  color: white;
+  transition: all 1s ease-out;
+}
+.content {
+  height: 100vh;
+  width: 100vw;
+  border: solid 1px black;
+}
+
+.top {
+  width: 100%;
+  height: 100%;
+  background: url('/top-background-img.jpg') no-repeat center / cover;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+}

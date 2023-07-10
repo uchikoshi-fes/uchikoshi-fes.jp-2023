@@ -1,5 +1,5 @@
 import { BsLine, BsYoutube, BsTwitter, BsInstagram } from 'react-icons/bs'
-
+import Contents from './contents'
 import styles from './page.module.scss'
 
 const Sns = () => {
@@ -39,11 +39,16 @@ const Sns = () => {
 
 const Home = () => {
   return (
-    <main className={styles.main}>
-      <h1 className={styles.title}>第44回打越祭公式サイト</h1>
-      <p className={styles.text}>2023年9月開催予定!</p>
-      <Sns />
-    </main>
+    <div>
+      {/* <main className={styles.main}>
+        <h1 className={styles.title}>第44回打越祭公式サイト</h1>
+        <p className={styles.text}>2023年9月開催予定!</p>
+        <Sns />
+      </main> */}
+      <div>
+        <Contents />
+      </div>
+    </div>
   )
 }
 
