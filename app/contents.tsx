@@ -6,15 +6,29 @@ import styles from './contents.module.scss'
 
 const Contents = () => {
   const [Style, setStyle] = useState('')
-  function handleClick(childStyle: string) {
+  const [viewUpdate, setViewUpdate] = useState('')
+  function handleClickStyle(childStyle: string) {
     setStyle(childStyle)
+  }
+  function handleViewUpdate(childName: string) {
+    setViewUpdate(childName)
   }
   return (
     <div className={Style}>
-      <Content name={styles.topColor} S={Style} setStyle={handleClick}>
+      <Content
+        name={styles.topColor}
+        viewUpdate={viewUpdate}
+        setStyle={handleClickStyle}
+        setViewUpdate={handleViewUpdate}
+      >
         <Top />
       </Content>
-      <Content name={styles.sloganColor} S={Style} setStyle={handleClick}>
+      <Content
+        name={styles.sloganColor}
+        viewUpdate={viewUpdate}
+        setStyle={handleClickStyle}
+        setViewUpdate={handleViewUpdate}
+      >
         <Slogan />
       </Content>
     </div>
@@ -25,21 +39,23 @@ const Content = ({
   name,
   setStyle,
   children,
-  S,
+  viewUpdate,
+  setViewUpdate,
 }: {
   name: string
   setStyle: Function
   children?: ReactNode
-  S: string
+  viewUpdate: string
+  setViewUpdate: Function
 }) => {
   const ref = useRef(null)
   const isInviw = useInView(ref, {
     margin: '-10% 0px -30% 0px',
   })
   useEffect(() => {
-    isInviw ? setStyle(name) : null
-    console.log('isInviw', name, isInviw, S)
-  }, [name, isInviw, setStyle, S])
+    isInviw ? setStyle(name) : setViewUpdate(name)
+    console.log('isInviw', name, isInviw)
+  }, [name, isInviw, setStyle, setViewUpdate, viewUpdate])
   return (
     <div className={styles.content} ref={ref}>
       {children}
