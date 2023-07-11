@@ -13,13 +13,11 @@ $color-slogan: #e53242;
 }
 .content {
   height: 100vh;
-  width: 100vw;
   border: solid 1px black;
 }
 
 .top {
-  width: 100%;
-  height: 100%;
+  height: 100vh;
   background: url('/top-background-img.jpg') no-repeat center / cover;
   display: flex;
   flex-direction: row-reverse;
