@@ -3,6 +3,7 @@
 import { useState, ReactNode, useRef, useEffect } from 'react'
 import { useInView } from 'framer-motion'
 import styles from './contents.module.scss'
+import Countdown from './countdown'
 
 const Contents = () => {
   const [Style, setStyle] = useState('')
@@ -30,6 +31,14 @@ const Contents = () => {
         setViewUpdate={handleViewUpdate}
       >
         <Slogan />
+      </Content>
+      <Content
+        name={styles.countdownColor}
+        viewUpdate={viewUpdate}
+        setStyle={handleClickStyle}
+        setViewUpdate={handleViewUpdate}
+      >
+        <Countdown />
       </Content>
     </div>
   )
