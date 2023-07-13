@@ -1,5 +1,9 @@
 $color-top: #ffffff;
 $color-slogan: #e53242;
+$color-countdown: #9272af;
+$color-pv: #47714e;
+$color-overview: #1c80c4;
+$color-access: #fcf6a6;
 
 .topColor {
   background-color: $color-top;
@@ -9,6 +13,26 @@ $color-slogan: #e53242;
 .sloganColor {
   background-color: $color-slogan;
   color: white;
+  transition: all 1s ease-out;
+}
+.countdownColor {
+  background-color: $color-countdown;
+  color: white;
+  transition: all 1s ease-out;
+}
+.pvColor {
+  background-color: $color-pv;
+  color: white;
+  transition: all 1s ease-out;
+}
+.overviewColor {
+  background-color: $color-overview;
+  color: white;
+  transition: all 1s ease-out;
+}
+.accessColor {
+  background-color: $color-access;
+  color: black;
   transition: all 1s ease-out;
 }
 .content {
@@ -26,4 +50,144 @@ $color-slogan: #e53242;
   justify-content: center;
   align-content: center;
   text-shadow: gray 1px 1px;
+}
+.title {
+  font-size: 48px;
+  letter-spacing: 0.2rem;
+  margin: 0;
+  text-align: center;
+  padding: 0 0.05em;
+  line-height: 100%;
+}
+.date {
+  font-size: 48px;
+  letter-spacing: 0.2rem;
+  margin: 0;
+  text-align: center;
+  padding: 0 0.05em;
+  line-height: 100%;
+}
+
+.slogan {
+  padding: 1rem 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  margin: 10vh 20vw;
+  font-family: serif;
+
+  > div {
+    > p {
+      padding: 15px 0;
+    }
+  }
+}
+.smallTitle {
+  font-size: 13px;
+  margin: 0;
+  margin-bottom: 10px;
+  letter-spacing: 0.1rem;
+}
+
+.largeTitle {
+  font-size: 48px;
+  letter-spacing: 0.2rem;
+  margin: 0;
+}
+
+.pv {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  margin: 10vh 20vw;
+}
+
+.overview {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  margin: 10vh 20vw;
+  font-family: serif;
+  .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.access {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  margin: 10vh 20vw;
+}
+
+.access-content-wrap {
+  display: flex;
+  margin-top: 50px;
+  gap: 40px;
+}
+
+.access-content {
+  ul {
+    padding: 0;
+    padding-inline-start: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  p {
+    margin: 5px 0;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+}
+
+.access-content-title {
+  letter-spacing: 0.1rem;
+  position: relative;
+  padding-left: 20px;
+
+  &::before {
+    content: '';
+    width: 10px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+}
+
+.map {
+  > iframe {
+    height: 60vw;
+    width: 60vw;
+  }
+}
+
+.route-button {
+  margin: 30px 0 0;
 }
