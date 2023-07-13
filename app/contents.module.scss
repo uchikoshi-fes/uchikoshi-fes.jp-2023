@@ -13,13 +13,17 @@ $color-slogan: #e53242;
 }
 .content {
   height: 100vh;
-  border: solid 1px black;
+  font-family: serif;
 }
 
 .top {
   height: 100vh;
   background: url('/top-background-img.jpg') no-repeat center / cover;
+  filter: grayscale(20%);
   display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-end;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  text-shadow: gray 1px 1px;
 }

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, ReactNode, useRef, useEffect } from 'react'
-import { useInView } from 'framer-motion'
+import { useInView, motion } from 'framer-motion'
 import styles from './contents.module.scss'
 import Countdown from './countdown'
 
@@ -63,7 +63,7 @@ const Content = ({
   })
   useEffect(() => {
     isInviw ? setStyle(name) : setViewUpdate(name)
-    console.log('isInviw', name, isInviw)
+    //console.log('isInviw', name, isInviw)
   }, [name, isInviw, setStyle, setViewUpdate, viewUpdate])
   return (
     <div className={styles.content} ref={ref}>
@@ -75,7 +75,20 @@ const Content = ({
 const Top = () => {
   return (
     <div className={styles.top}>
-      <object type='image/svg+xml' data='kaika-sengen.svg' width='500' height='400'></object>
+      <object type='image/svg+xml' data='kaika-sengen.svg' width='390' height='200'></object>
+      <motion.div
+        className={styles.titleContainer}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          duration: 1,
+          delay: 5,
+          ease: 'easeInOut',
+        }}
+      >
+        <h1 className={styles.title}>打越祭</h1>
+        <h2 className={styles.date}>9/17・9/18</h2>
+      </motion.div>
     </div>
   )
 }
