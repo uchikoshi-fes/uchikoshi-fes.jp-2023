@@ -1,8 +1,10 @@
+@use '@mixins' as *;
+
 .countdown {
+  @include container();
   display: flex;
   align-items: center;
   height: 80vh;
-  margin: 10vh 20vw;
   letter-spacing: 0.2rem;
   position: relative;
 

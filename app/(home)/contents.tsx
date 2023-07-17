@@ -155,11 +155,11 @@ const Overview = () => {
       <div className={styles.detail}>
         <ul>
           <li>
-            <p>日程</p>
+            <p className={styles.subheading}>日程</p>
             <p>9月17日（日）18日（月）</p>
           </li>
           <li>
-            <p>場所</p>
+            <p className={styles.subheading}>場所</p>
             <p>浅野中学校・高等学校</p>
             <p>〒221-0012 神奈川県横浜市神奈川区子安台１丁目３-１</p>
           </li>

@@ -1,3 +1,12 @@
+// Container
+@mixin container($container-max-width: 1200px) {
+  max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 // [Breakpoints](https://getbootstrap.jp/docs/5.0/layout/breakpoints/)
 
 // X-Small devices (portrait phones, less than 576px)
