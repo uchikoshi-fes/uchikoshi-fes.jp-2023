@@ -156,7 +156,7 @@ const Overview = () => {
         <ul>
           <li>
             <p className={styles.subheading}>日程</p>
-            <p>9月17日（日）18日（月）</p>
+            <p>9月17日（日）・18日（月 ・祝 ）</p>
           </li>
           <li>
             <p className={styles.subheading}>場所</p>
