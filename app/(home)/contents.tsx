@@ -183,7 +183,9 @@ const GoogleMaps = () => {
         allowFullScreen={false}
         loading='lazy'
         referrerPolicy='no-referrer-when-downgrade'
-      ></iframe>
+      >
+        ロード中...
+      </iframe>
     </div>
   )
 }
