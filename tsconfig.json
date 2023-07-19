@@ -21,7 +21,9 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["components/*"]
+      "@components/*": ["components/*"],
+      "@variables": ["app/variables.scss"],
+      "@mixins": ["app/mixins.scss"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
