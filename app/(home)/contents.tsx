@@ -141,8 +141,8 @@ const Pv = () => {
     <div className={styles.pv}>
       <h2 className={styles.largeTitle}>PV</h2>
       <Image src='PV.png' alt='PV is coming soon.' width='300' height='300' priority={false} />
-      <p>Officil PV is coming soon!</p>
-      <p>公式PV完成までご期待ください</p>
+      <p>Official PV is coming soon!</p>
+      <p>公式PV完成までもう少しだけお待ちください！</p>
     </div>
   )
 }
