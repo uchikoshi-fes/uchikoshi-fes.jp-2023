@@ -63,6 +63,61 @@
   padding: 0 0.05em;
   line-height: 100%;
 }
+.sns {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.snsIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > a {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+%icon {
+  font-size: 2.5rem;
+  color: $color-white;
+  transition: color 0.3s ease;
+}
+
+.youtube {
+  @extend %icon;
+
+  &:hover {
+    color: $color-youtube;
+  }
+}
+
+.twitter {
+  @extend %icon;
+
+  &:hover {
+    color: $color-twitter;
+  }
+}
+
+.instagram {
+  @extend %icon;
+
+  &:hover {
+    color: $color-instagram;
+  }
+}
+
+.line {
+  @extend %icon;
+
+  &:hover {
+    color: $color-line;
+  }
+}
 
 .slogan {
   @include container();
@@ -81,7 +136,7 @@
   }
 }
 .smallTitle {
-  font-size: 13px;
+  font-size: 20px;
   margin: 0;
   margin-bottom: 10px;
   letter-spacing: 0.1rem;
@@ -166,7 +221,6 @@
 .access-content-title {
   letter-spacing: 0.1rem;
   position: relative;
-  padding-left: 20px;
 
   &::before {
     content: '';
@@ -179,6 +233,7 @@
 }
 
 .map {
+  background-color: gray;
   > iframe {
     height: 50vh;
     width: 60vw;
