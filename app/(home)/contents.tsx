@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, ReactNode, useRef, useEffect } from 'react'
 import { useInView, motion } from 'framer-motion'
+import { BsLine, BsYoutube, BsTwitter, BsInstagram } from 'react-icons/bs'
 import { FaChevronRight } from 'react-icons/fa'
 import styles from './contents.module.scss'
 import Countdown from './countdown'
@@ -98,6 +99,41 @@ const Content = ({
   )
 }
 
+const Sns = () => {
+  return (
+    <div className={styles.sns}>
+      <div className={styles.snsIcon}>
+        <a href='https://line.me/R/ti/p/@136ffgbc'>
+          <span className={styles.line}>
+            <BsLine />
+          </span>
+        </a>
+      </div>
+      <div className={styles.snsIcon}>
+        <a href='https://youtube.com/c/uchikoshi-fes'>
+          <span className={styles.youtube}>
+            <BsYoutube />
+          </span>
+        </a>
+      </div>
+      <div className={styles.snsIcon}>
+        <a href='https://twitter.com/uchikoshifes'>
+          <span className={styles.twitter}>
+            <BsTwitter />
+          </span>
+        </a>
+      </div>
+      <div className={styles.snsIcon}>
+        <a href='https://instagram.com/uchikoshifes'>
+          <span className={styles.instagram}>
+            <BsInstagram />
+          </span>
+        </a>
+      </div>
+    </div>
+  )
+}
+
 const Top = () => {
   return (
     <div className={styles.top}>
@@ -114,6 +150,7 @@ const Top = () => {
       >
         <h1 className={styles.title}>打越祭</h1>
         <h2 className={styles.date}>9/17・9/18</h2>
+        <Sns />
       </motion.div>
     </div>
   )
