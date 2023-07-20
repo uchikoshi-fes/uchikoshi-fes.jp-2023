@@ -122,7 +122,6 @@ const Countdown = () => {
           return (
             <div>
               <div className={styles.left}>{fes.name}開会まで</div>
-              <span className={styles.small}>あと</span>
               <br />
               <Remaining start={fes.start} now={now} />
               <span className={styles.small}>&#xff01;</span>
