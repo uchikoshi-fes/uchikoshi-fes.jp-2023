@@ -103,28 +103,28 @@ const Sns = () => {
   return (
     <div className={styles.sns}>
       <div className={styles.snsIcon}>
-        <a href='https://line.me/R/ti/p/@136ffgbc'>
+        <a href='https://line.me/R/ti/p/@136ffgbc' target="_blank" rel="noopener noreferrer">
           <span className={styles.line}>
             <BsLine />
           </span>
         </a>
       </div>
       <div className={styles.snsIcon}>
-        <a href='https://youtube.com/c/uchikoshi-fes'>
+        <a href='https://youtube.com/c/uchikoshi-fes' target="_blank" rel="noopener noreferrer">
           <span className={styles.youtube}>
             <BsYoutube />
           </span>
         </a>
       </div>
       <div className={styles.snsIcon}>
-        <a href='https://twitter.com/uchikoshifes'>
+        <a href='https://twitter.com/uchikoshifes' target="_blank" rel="noopener noreferrer">
           <span className={styles.twitter}>
             <BsTwitter />
           </span>
         </a>
       </div>
       <div className={styles.snsIcon}>
-        <a href='https://instagram.com/uchikoshifes'>
+        <a href='https://instagram.com/uchikoshifes' target="_blank" rel="noopener noreferrer">
           <span className={styles.instagram}>
             <BsInstagram />
           </span>
