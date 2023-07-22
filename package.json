@@ -1,6 +1,6 @@
 {
   "name": "uchikoshi-fes.jp-2023",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
