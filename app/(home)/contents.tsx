@@ -137,7 +137,9 @@ const Sns = () => {
 const Top = () => {
   return (
     <div className={styles.top}>
-      <object type='image/svg+xml' data='kaika-sengen.svg' width='390' height='200'></object>
+      <div className={styles.objectStyle}>
+        <object type='image/svg+xml' data='kaika-sengen.svg' width='390' height='200'></object>
+      </div>
       <motion.div
         className={styles.titleContainer}
         initial={{ opacity: 0 }}
