@@ -151,7 +151,8 @@ const Top = () => {
         }}
       >
         <h1 className={styles.title}>打越祭</h1>
-        <h2 className={styles.date}>9/17・9/18</h2>
+        <p className={styles.date}>9/17・9/18</p>
+        <p className={styles['no-rsv-no-lim']}>予約不要・人数制限なし</p>
         <Sns />
       </motion.div>
     </div>
@@ -203,7 +204,7 @@ const Overview = () => {
             <p>〒221-0012 神奈川県横浜市神奈川区子安台１丁目３-１</p>
           </li>
           <li>
-            <p>詳細は後日公開予定</p>
+            <p>事前予約不要・人数制限なし</p>
           </li>
         </ul>
       </div>
@@ -239,8 +240,8 @@ const Access = () => {
           <li>
             <h3 className={styles['access-content-title']}>電車でお越しの方</h3>
             <p>JR京浜東北線「新子安駅」から 徒歩8分</p>
-            <p>京急本線「京急新子安駅」から 徒歩6分</p>
-            <p>京急本線「生麦駅」から 徒歩11分</p>
+            <p>京急本線「京急新子安駅」から 徒歩8分</p>
+            <p>京急本線「生麦駅」から 徒歩14分</p>
           </li>
           <li>
             <h3 className={styles['access-content-title']}>路線バスでお越しの方</h3>
