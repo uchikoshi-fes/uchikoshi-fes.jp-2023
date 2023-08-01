@@ -103,28 +103,28 @@ const Sns = () => {
   return (
     <div className={styles.sns}>
       <div className={styles.snsIcon}>
-        <a href='https://line.me/R/ti/p/@136ffgbc' target="_blank" rel="noopener noreferrer">
+        <a href='https://line.me/R/ti/p/@136ffgbc' target='_blank' rel='noopener noreferrer'>
           <span className={styles.line}>
             <BsLine />
           </span>
         </a>
       </div>
       <div className={styles.snsIcon}>
-        <a href='https://youtube.com/c/uchikoshi-fes' target="_blank" rel="noopener noreferrer">
+        <a href='https://youtube.com/c/uchikoshi-fes' target='_blank' rel='noopener noreferrer'>
           <span className={styles.youtube}>
             <BsYoutube />
           </span>
         </a>
       </div>
       <div className={styles.snsIcon}>
-        <a href='https://twitter.com/uchikoshifes' target="_blank" rel="noopener noreferrer">
+        <a href='https://twitter.com/uchikoshifes' target='_blank' rel='noopener noreferrer'>
           <span className={styles.twitter}>
             <BsTwitter />
           </span>
         </a>
       </div>
       <div className={styles.snsIcon}>
-        <a href='https://instagram.com/uchikoshifes' target="_blank" rel="noopener noreferrer">
+        <a href='https://instagram.com/uchikoshifes' target='_blank' rel='noopener noreferrer'>
           <span className={styles.instagram}>
             <BsInstagram />
           </span>
@@ -239,8 +239,8 @@ const Access = () => {
           <li>
             <h3 className={styles['access-content-title']}>電車でお越しの方</h3>
             <p>JR京浜東北線「新子安駅」から 徒歩8分</p>
-            <p>京急本線「京急新子安駅」から 徒歩6分</p>
-            <p>京急本線「生麦駅」から 徒歩11分</p>
+            <p>京急本線「京急新子安駅」から 徒歩8分</p>
+            <p>京急本線「生麦駅」から 徒歩14分</p>
           </li>
           <li>
             <h3 className={styles['access-content-title']}>路線バスでお越しの方</h3>
