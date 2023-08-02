@@ -103,28 +103,28 @@ const Sns = () => {
   return (
     <div className={styles.sns}>
       <div className={styles.snsIcon}>
-        <Link href='https://line.me/R/ti/p/@136ffgbc'>
+        <Link href='https://line.me/R/ti/p/@136ffgbc' alia-label='公式LINE'>
           <span className={styles.line}>
             <BsLine />
           </span>
         </Link>
       </div>
       <div className={styles.snsIcon}>
-        <Link href='https://youtube.com/c/uchikoshi-fes'>
+        <Link href='https://youtube.com/c/uchikoshi-fes' alia-label='公式YouTube'>
           <span className={styles.youtube}>
             <BsYoutube />
           </span>
         </Link>
       </div>
       <div className={styles.snsIcon}>
-        <Link href='https://twitter.com/uchikoshifes'>
+        <Link href='https://twitter.com/uchikoshifes' alia-label='公式Twitter'>
           <span className={styles.twitter}>
             <BsTwitter />
           </span>
         </Link>
       </div>
       <div className={styles.snsIcon}>
-        <Link href='https://instagram.com/uchikoshifes'>
+        <Link href='https://instagram.com/uchikoshifes' alia-label='公式Instagram'>
           <span className={styles.instagram}>
             <BsInstagram />
           </span>
@@ -138,7 +138,13 @@ const Top = () => {
   return (
     <div className={styles.top}>
       <div className={styles.objectStyle}>
-        <object type='image/svg+xml' data='kaika-sengen.svg' width='390' height='200'></object>
+        <object
+          title='カイカ宣言'
+          type='image/svg+xml'
+          data='kaika-sengen.svg'
+          width='390'
+          height='200'
+        ></object>
       </div>
       <motion.div
         className={styles.titleContainer}
@@ -162,7 +168,7 @@ const Top = () => {
 const Slogan = () => {
   return (
     <div className={styles.slogan}>
-      <h6 className={styles.smallTitle}>スローガン</h6>
+      <h3 className={styles.smallTitle}>スローガン</h3>
       <h2 className={styles.largeTitle}> カイカ宣言 </h2>
       <p>
         <>
@@ -190,7 +196,7 @@ const Pv = () => {
 const Overview = () => {
   return (
     <div className={styles.overview}>
-      <h6 className={styles.smallTitle}>概要</h6>
+      <h3 className={styles.smallTitle}>概要</h3>
       <h2 className={styles.largeTitle}> 第44回 打越祭 </h2>
       <div className={styles.detail}>
         <ul>
@@ -223,6 +229,7 @@ const GoogleMaps = () => {
         allowFullScreen={false}
         loading='lazy'
         referrerPolicy='no-referrer-when-downgrade'
+        title='浅野中学校・高等学校周辺の地図'
       >
         ロード中...
       </iframe>
