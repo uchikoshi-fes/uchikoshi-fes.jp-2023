@@ -35,7 +35,22 @@
   height: 100vh;
   font-family: serif;
 }
-
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+.visually-hidden:focus {
+  overflow: hidden;
+  height: auto;
+  width: auto;
+  clip-path: inset(0%);
+}
 .top {
   height: 100vh;
   background: url('/top-background-img.jpg') no-repeat center / cover;
@@ -96,6 +111,9 @@
   > a {
     margin-left: 2rem;
     margin-right: 2rem;
+    > div {
+      color: white;
+    }
   }
 }
 

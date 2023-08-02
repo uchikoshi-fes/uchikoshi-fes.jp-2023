@@ -107,6 +107,9 @@ const Sns = () => {
           <span className={styles.line}>
             <BsLine />
           </span>
+          <div tabIndex={0} className={styles['visually-hidden']}>
+            <span>LINE</span>
+          </div>
         </Link>
       </div>
       <div className={styles.snsIcon}>
@@ -114,6 +117,9 @@ const Sns = () => {
           <span className={styles.youtube}>
             <BsYoutube />
           </span>
+          <div tabIndex={0} className={styles['visually-hidden']}>
+            <span>YouTube</span>
+          </div>
         </Link>
       </div>
       <div className={styles.snsIcon}>
@@ -121,6 +127,9 @@ const Sns = () => {
           <span className={styles.twitter}>
             <BsTwitter />
           </span>
+          <div tabIndex={0} className={styles['visually-hidden']}>
+            <span>Twitter</span>
+          </div>
         </Link>
       </div>
       <div className={styles.snsIcon}>
@@ -128,6 +137,9 @@ const Sns = () => {
           <span className={styles.instagram}>
             <BsInstagram />
           </span>
+          <div tabIndex={0} className={styles['visually-hidden']}>
+            <span>Instagram</span>
+          </div>
         </Link>
       </div>
     </div>
@@ -168,8 +180,8 @@ const Top = () => {
 const Slogan = () => {
   return (
     <div className={styles.slogan}>
-      <h3 className={styles.smallTitle}>スローガン</h3>
-      <h2 className={styles.largeTitle}> カイカ宣言 </h2>
+      <h2 className={styles.smallTitle}>スローガン</h2>
+      <h3 className={styles.largeTitle}> カイカ宣言 </h3>
       <p>
         <>
           コロナ禍からようやく活路を見出し、制約を受けずに「開禍」した文化祭を開催できる状況になりつつあります。
@@ -196,8 +208,8 @@ const Pv = () => {
 const Overview = () => {
   return (
     <div className={styles.overview}>
-      <h3 className={styles.smallTitle}>概要</h3>
-      <h2 className={styles.largeTitle}> 第44回 打越祭 </h2>
+      <h2 className={styles.smallTitle}>概要</h2>
+      <h3 className={styles.largeTitle}> 第44回 打越祭 </h3>
       <div className={styles.detail}>
         <ul>
           <li>
