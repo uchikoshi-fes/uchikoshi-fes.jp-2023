@@ -53,14 +53,23 @@
 }
 .top {
   height: 100vh;
-  background: url('/top-background-img.jpg') no-repeat center / cover;
-  filter: grayscale(20%);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   text-shadow: gray 1px 1px;
+}
+.top-background-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(20%);
+}
+.top-contents {
+  z-index: 1;
 }
 .title {
   font-size: 48px;

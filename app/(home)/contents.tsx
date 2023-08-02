@@ -149,30 +149,40 @@ const Sns = () => {
 const Top = () => {
   return (
     <div className={styles.top}>
-      <div className={styles.objectStyle}>
-        <object
-          title='カイカ宣言'
-          type='image/svg+xml'
-          data='kaika-sengen.svg'
-          width='390'
-          height='200'
-        ></object>
+      <Image
+        src='/top-background-img.jpg'
+        alt='浅野の校舎の画像'
+        className={styles['top-background-img']}
+        width={2048}
+        height={1536}
+        loading='eager'
+      />
+      <div className={styles['top-contents']}>
+        <div className={styles.objectStyle}>
+          <object
+            title='カイカ宣言'
+            type='image/svg+xml'
+            data='kaika-sengen.svg'
+            width='390'
+            height='200'
+          ></object>
+        </div>
+        <motion.div
+          className={styles.titleContainer}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 1,
+            delay: 5,
+            ease: 'easeInOut',
+          }}
+        >
+          <h1 className={styles.title}>打越祭</h1>
+          <p className={styles.date}>9/17・9/18</p>
+          <p className={styles['no-rsv-no-lim']}>予約不要・人数制限なし</p>
+          <Sns />
+        </motion.div>
       </div>
-      <motion.div
-        className={styles.titleContainer}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          duration: 1,
-          delay: 5,
-          ease: 'easeInOut',
-        }}
-      >
-        <h1 className={styles.title}>打越祭</h1>
-        <p className={styles.date}>9/17・9/18</p>
-        <p className={styles['no-rsv-no-lim']}>予約不要・人数制限なし</p>
-        <Sns />
-      </motion.div>
     </div>
   )
 }
