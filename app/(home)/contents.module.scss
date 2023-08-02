@@ -63,6 +63,24 @@
   padding: 0 0.05em;
   line-height: 100%;
 }
+.no-rsv-no-lim {
+  font-size: 30px;
+  letter-spacing: 0.2rem;
+  margin: 0;
+  text-align: center;
+  padding: 0 0.05em;
+  line-height: 100%;
+  text-decoration: underline;
+}
+.titleContainer {
+  width: 100vw;
+}
+
+.objectStyle {
+  display: flex;
+  justify-content: center;
+}
+
 .sns {
   margin-top: 2rem;
   display: flex;
@@ -184,8 +202,15 @@
     flex-direction: column;
     align-items: center;
     padding: 0;
+    line-height: 1.1;
+  }
+  .subheading {
+    font-size: 1.2rem;
+    margin: 15px 0 0 2px;
+    text-decoration: underline #fff;
   }
 }
+
 .access {
   @include container();
   text-align: center;

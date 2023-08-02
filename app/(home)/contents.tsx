@@ -1,10 +1,10 @@
 'use client'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useState, ReactNode, useRef, useEffect } from 'react'
 import { useInView, motion } from 'framer-motion'
 import { BsLine, BsYoutube, BsTwitter, BsInstagram } from 'react-icons/bs'
 import { FaChevronRight } from 'react-icons/fa'
+import Link from '../link'
 import styles from './contents.module.scss'
 import Countdown from './countdown'
 
@@ -103,32 +103,32 @@ const Sns = () => {
   return (
     <div className={styles.sns}>
       <div className={styles.snsIcon}>
-        <a href='https://line.me/R/ti/p/@136ffgbc' target="_blank" rel="noopener noreferrer">
+        <Link href='https://line.me/R/ti/p/@136ffgbc'>
           <span className={styles.line}>
             <BsLine />
           </span>
-        </a>
+        </Link>
       </div>
       <div className={styles.snsIcon}>
-        <a href='https://youtube.com/c/uchikoshi-fes' target="_blank" rel="noopener noreferrer">
+        <Link href='https://youtube.com/c/uchikoshi-fes'>
           <span className={styles.youtube}>
             <BsYoutube />
           </span>
-        </a>
+        </Link>
       </div>
       <div className={styles.snsIcon}>
-        <a href='https://twitter.com/uchikoshifes' target="_blank" rel="noopener noreferrer">
+        <Link href='https://twitter.com/uchikoshifes'>
           <span className={styles.twitter}>
             <BsTwitter />
           </span>
-        </a>
+        </Link>
       </div>
       <div className={styles.snsIcon}>
-        <a href='https://instagram.com/uchikoshifes' target="_blank" rel="noopener noreferrer">
+        <Link href='https://instagram.com/uchikoshifes'>
           <span className={styles.instagram}>
             <BsInstagram />
           </span>
-        </a>
+        </Link>
       </div>
     </div>
   )
@@ -137,7 +137,9 @@ const Sns = () => {
 const Top = () => {
   return (
     <div className={styles.top}>
-      <object type='image/svg+xml' data='kaika-sengen.svg' width='390' height='200'></object>
+      <div className={styles.objectStyle}>
+        <object type='image/svg+xml' data='kaika-sengen.svg' width='390' height='200'></object>
+      </div>
       <motion.div
         className={styles.titleContainer}
         initial={{ opacity: 0 }}
@@ -149,7 +151,8 @@ const Top = () => {
         }}
       >
         <h1 className={styles.title}>打越祭</h1>
-        <h2 className={styles.date}>9/17・9/18</h2>
+        <p className={styles.date}>9/17・9/18</p>
+        <p className={styles['no-rsv-no-lim']}>予約不要・人数制限なし</p>
         <Sns />
       </motion.div>
     </div>
@@ -201,7 +204,7 @@ const Overview = () => {
             <p>〒221-0012 神奈川県横浜市神奈川区子安台１丁目３-１</p>
           </li>
           <li>
-            <p>詳細は後日公開予定</p>
+            <p>事前予約不要・人数制限なし</p>
           </li>
         </ul>
       </div>
@@ -237,19 +240,18 @@ const Access = () => {
           <li>
             <h3 className={styles['access-content-title']}>電車でお越しの方</h3>
             <p>JR京浜東北線「新子安駅」から 徒歩8分</p>
-            <p>京急本線「京急新子安駅」から 徒歩6分</p>
-            <p>京急本線「生麦駅」から 徒歩11分</p>
+            <p>京急本線「京急新子安駅」から 徒歩8分</p>
+            <p>京急本線「生麦駅」から 徒歩14分</p>
           </li>
           <li>
             <h3 className={styles['access-content-title']}>路線バスでお越しの方</h3>
             <p>３８系統「浅野学園前バス停」から 徒歩1分</p>
-            <Link
-              className={styles['route-button']}
-              href='https://maps.apple.com/maps?dirflg=r&daddr=35.489455621313176,139.6582380936508'
-            >
-              現在地からのルート
-              <FaChevronRight />
-            </Link>
+            <div className={styles['route-button']}>
+              <Link href='https://maps.apple.com/maps?dirflg=r&daddr=35.489455621313176,139.6582380936508'>
+                現在地からのルート
+                <FaChevronRight />
+              </Link>
+            </div>
           </li>
         </ul>
       </div>
