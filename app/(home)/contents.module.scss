@@ -57,7 +57,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
+  align-items: flex-start;
   text-shadow: gray 1px 1px;
 }
 .top-background-img {
@@ -69,6 +69,10 @@
   filter: grayscale(20%);
 }
 .top-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
 }
 .title {
@@ -104,7 +108,9 @@
   display: flex;
   justify-content: center;
 }
-
+.kaika-sengen {
+  max-width: 100%;
+}
 .sns {
   margin-top: 2rem;
   display: flex;
@@ -116,6 +122,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 25%;
 
   > a {
     margin-left: 2rem;
@@ -202,6 +209,10 @@
   align-items: center;
   flex-direction: column;
   height: 80vh;
+}
+.pv-img {
+  max-width: 100%;
+  height: auto;
 }
 
 .overview {

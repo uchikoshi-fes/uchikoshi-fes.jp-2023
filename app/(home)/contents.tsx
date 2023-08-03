@@ -163,8 +163,9 @@ const Top = () => {
             title='カイカ宣言'
             type='image/svg+xml'
             data='kaika-sengen.svg'
-            width='390'
+            width='300'
             height='200'
+            className={styles['kaika-sengen']}
           ></object>
         </div>
         <motion.div
@@ -208,7 +209,14 @@ const Pv = () => {
   return (
     <div className={styles.pv}>
       <h2 className={styles.largeTitle}>PV</h2>
-      <Image src='PV.png' alt='PV is coming soon.' width='300' height='300' priority={false} />
+      <Image
+        src='PV.png'
+        alt='PV is coming soon.'
+        width='300'
+        height='300'
+        priority={false}
+        className={styles['pv-img']}
+      />
       <p>Official PV is coming soon!</p>
       <p>公式PV完成までもう少しだけお待ちください！</p>
     </div>
