@@ -150,7 +150,7 @@ const Top = () => {
   return (
     <div className={styles.top}>
       <Image
-        src='/top-background-img.jpg'
+        src='top-background-img.jpg'
         alt='浅野の校舎の画像'
         className={styles['top-background-img']}
         width={2048}
@@ -169,7 +169,7 @@ const Top = () => {
         </div>
         <motion.div
           className={styles.titleContainer}
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0.001 }}
           animate={{ opacity: 1 }}
           transition={{
             duration: 1,
