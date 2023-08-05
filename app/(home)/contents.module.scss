@@ -33,6 +33,7 @@
 }
 .content {
   height: 100vh;
+  min-height: 600px;
   font-family: serif;
 }
 .visually-hidden {
@@ -53,6 +54,7 @@
 }
 .top {
   height: 100vh;
+  min-height: 600px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -64,6 +66,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
+  min-height: 600px;
   object-fit: cover;
   object-position: center;
   filter: grayscale(20%);
@@ -179,6 +182,7 @@
   align-items: center;
   flex-direction: column;
   height: 80vh;
+  min-height: 600px;
   font-family: serif;
 
   > div {
@@ -209,6 +213,7 @@
   align-items: center;
   flex-direction: column;
   height: 80vh;
+  min-height: 600px;
 }
 .pv-img {
   max-width: 100%;
@@ -223,6 +228,7 @@
   align-items: center;
   flex-direction: column;
   height: 80vh;
+  min-height: 600px;
   font-family: serif;
   .detail {
     display: flex;
@@ -257,6 +263,7 @@
   align-items: center;
   flex-direction: column;
   height: 80vh;
+  min-height: 600px;
 }
 
 .access-content-wrap {
