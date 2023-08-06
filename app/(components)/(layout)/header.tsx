@@ -10,7 +10,7 @@ const Header = ({
 }: {
   setScrollable?: React.Dispatch<React.SetStateAction<boolean>>
 }) => {
-  const isNarrow = useSmallerThan({ width: 900 })
+  const isNarrow = useSmallerThan({ width: 960 })
 
   return (
     <header className={styles.header}>
