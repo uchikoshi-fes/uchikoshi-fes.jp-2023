@@ -4,9 +4,9 @@ import { useState, ReactNode, useRef, useEffect } from 'react'
 import { useInView, motion } from 'framer-motion'
 import { BsLine, BsYoutube, BsTwitter, BsInstagram } from 'react-icons/bs'
 import { FaChevronRight } from 'react-icons/fa'
-import Link from '../link'
 import styles from './contents.module.scss'
 import Countdown from './countdown'
+import Link from 'app/(components)/(common)/link'
 
 const Contents = () => {
   const [Style, setStyle] = useState('')

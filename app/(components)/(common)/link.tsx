@@ -1,11 +1,20 @@
 import NextLink from 'next/link'
 import { ReactNode } from 'react'
 
-const Link = ({ href, children, ...props }: { href: string; children?: ReactNode }) => {
+const Link = ({
+  href,
+  children,
+  className,
+  ...props
+}: {
+  href: string
+  children?: ReactNode
+  className?: string
+}) => {
   // internal link
   if (href.startsWith('/') || href === '') {
     return (
-      <NextLink href={href}>
+      <NextLink href={href} className={className}>
         <a href={href} {...props}>
           {children}
         </a>
@@ -14,7 +23,7 @@ const Link = ({ href, children, ...props }: { href: string; children?: ReactNode
     // external link
   } else {
     return (
-      <a href={href} target='_blank' rel='noopener noreferrer' {...props}>
+      <a href={href} target='_blank' rel='noopener noreferrer' className={className} {...props}>
         {children}
       </a>
     )
