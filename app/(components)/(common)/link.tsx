@@ -14,10 +14,8 @@ const Link = ({
   // internal link
   if (href.startsWith('/') || href === '') {
     return (
-      <NextLink href={href} className={className}>
-        <a href={href} {...props}>
-          {children}
-        </a>
+      <NextLink href={href} className={className} {...props}>
+        {children}
       </NextLink>
     )
     // external link
