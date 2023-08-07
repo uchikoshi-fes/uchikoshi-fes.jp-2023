@@ -1,3 +1,4 @@
+'use client'
 import { usePathname } from 'next/navigation'
 import React, { useState, useEffect } from 'react'
 import { FaBars, FaRegWindowClose } from 'react-icons/fa'
@@ -88,13 +89,18 @@ const NarrowMenu = ({
         <div className={styles['narrow-open-background']} onClick={() => handleOpen(false)}></div>
       )}
       <div className={`${styles.narrow} ${open ? styles['narrow-open'] : ''}`}>
-        <button
-          title='目次を閉じる'
-          className={styles['narrow-closebutton']}
-          onClick={() => handleOpen(false)}
-        >
-          <FaRegWindowClose />
-        </button>
+        <div className={styles['narrow-menu-header']}>
+          <button
+            title='目次を閉じる'
+            className={styles['narrow-closebutton']}
+            onClick={() => handleOpen(false)}
+          >
+            <FaRegWindowClose />
+          </button>
+          <div className={styles['narrows-site-name']}>
+            <Link href='/'>浅野学園打越祭</Link>
+          </div>
+        </div>
         <div className={styles['narrow-content']}>
           <MenuLinks narrow />
         </div>
