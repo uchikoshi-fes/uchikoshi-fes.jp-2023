@@ -1,0 +1,134 @@
+@use '@mixins' as *;
+@use '@variables' as *;
+
+$easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
+
+.footer {
+  color: $color-white;
+  background-color: $color-darker;
+  justify-content: center;
+  display: grid;
+  grid-template-rows: 80% 20%;
+  grid-template-columns: repeat(7, 1fr);
+  width: 100%;
+  padding: 1rem max(10%, 50% - 500px);
+  @include xs {
+    grid-template-rows: 45% 45% 10%;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    padding: 1rem max(10%, 50% - 600px);
+  }
+}
+
+.sns {
+  width: 20em;
+  max-width: 100%;
+  grid-column: -1;
+  grid-row: 1;
+  margin: 2em 0 0 auto;
+  @include xs {
+    grid-column: span 4;
+    grid-row: 1;
+    margin: auto;
+  }
+
+  > div {
+    margin: 1em 0;
+    color: white;
+
+    > a {
+      display: block;
+      padding: 0.5em 0.75em;
+      text-decoration: none;
+      transition: 0.3s $easeOutSine;
+      color: $color-white;
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
+}
+
+.sns-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+  text-align: center;
+}
+
+.sns-line {
+  background-color: $color-line;
+
+  > a:hover {
+    color: $color-line;
+  }
+}
+
+.sns-youtube {
+  background-color: $color-youtube;
+
+  > a:hover {
+    color: $color-youtube;
+  }
+}
+
+.sns-twitter {
+  background-color: $color-twitter;
+
+  > a:hover {
+    color: $color-twitter;
+  }
+}
+
+.sns-instagram {
+  background-color: $color-instagram;
+
+  > a:hover {
+    color: $color-instagram;
+  }
+}
+
+.menu {
+  margin: 2em 0;
+  grid-column: span 3;
+  grid-row: 1;
+  @include xs {
+    grid-column: span 2;
+    grid-row: 2;
+  }
+}
+
+.menu-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin: 0.5em 0;
+}
+
+.menu-links {
+  margin: 0.5em 0;
+
+  a {
+    text-decoration: none;
+    color: rgba(#fff, 0.8);
+    transition: color ease-in-out 250ms;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.copyright {
+  font-family: 'Noto Serif JP', sans-serif;
+  text-align: right;
+  letter-spacing: 0.1em;
+  grid-column: -1;
+  grid-row: 2;
+  color: rgba(#fff, 0.7);
+  margin-top: 1em;
+  @include xs {
+    grid-column: span 4;
+    grid-row: 3;
+  }
+}
