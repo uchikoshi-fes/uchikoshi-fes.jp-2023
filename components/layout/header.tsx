@@ -2,8 +2,8 @@
 import React from 'react'
 import styles from './header.module.scss'
 import Menu from './menu'
-import Link from 'app/(components)/(common)/link'
-import { useSmallerThan } from 'app/(hooks)/useWindowSize'
+import Link from 'components/common/link'
+import { useSmallerThan } from 'hooks/useWindowSize'
 
 const Header = ({
   setScrollable,

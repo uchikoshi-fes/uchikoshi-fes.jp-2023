@@ -1,4 +1,4 @@
-import Link from './(components)/(common)/link'
+import Link from '../components/common/link'
 import styles from './not-found.module.scss'
 export default function NotFound() {
   return (

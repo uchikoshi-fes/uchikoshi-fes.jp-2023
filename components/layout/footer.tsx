@@ -10,7 +10,7 @@ import styles from './footer.module.scss'
 // icons
 // config
 import { links as menuLinks } from './menu'
-import Link from 'app/(components)/(common)/link'
+import Link from 'components/common/link'
 import PACKAGE from 'package.json'
 
 // const Tweets = ({ tweetLimit }) => {

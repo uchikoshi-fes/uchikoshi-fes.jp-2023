@@ -2,7 +2,7 @@
 import { usePathname } from 'next/navigation'
 import React, { useState, useEffect } from 'react'
 import { FaBars, FaRegWindowClose } from 'react-icons/fa'
-import Link from '../(common)/link'
+import Link from '../common/link'
 import styles from './menu.module.scss'
 
 const links = [

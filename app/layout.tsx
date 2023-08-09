@@ -1,7 +1,7 @@
 import './globals.scss'
 import { Noto_Sans_JP } from 'next/font/google'
-import Footer from 'app/(components)/(layout)/footer'
-import Header from 'app/(components)/(layout)/header'
+import Footer from 'components/layout/footer'
+import Header from 'components/layout/header'
 
 const notoSansJp = Noto_Sans_JP({
   subsets: ['latin'],
