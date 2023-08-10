@@ -24,7 +24,7 @@ const MenuLinks = ({ narrow = false }: { narrow?: boolean }) => {
         console.log(pathname)
         // 現在のページがこのリンク以下の場合は active にする
         let className
-        if (href === '/' ? pathname === href : pathname.startsWith(href)) {
+        if (href === '/' ? pathname === href : pathname !== null && pathname.startsWith(href)) {
           className = narrow ? styles['narrow-active'] : styles['wide-active']
         } else {
           className = narrow ? styles['narrow-inactive'] : styles['wide-inactive']
