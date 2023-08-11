@@ -1,0 +1,115 @@
+@use '@mixins' as *;
+@use '@variables' as *;
+
+.promotion-videos {
+  padding: 30px 60px;
+
+  > h2 {
+    margin: 1rem;
+  }
+
+  @include sm {
+    padding: 20px 0 0 0;
+  }
+}
+
+.pv-title {
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 3rem;
+  @include sm {
+    padding-bottom: 20px;
+  }
+}
+
+.pv-window {
+  width: 60%;
+  margin: 0 auto;
+  color: $color-darker;
+  @include md {
+    width: 100%;
+  }
+}
+
+.pv-tabs {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+
+  > li {
+    height: 3rem;
+    flex: 1;
+
+    > button {
+      height: 100%;
+      width: 100%;
+      border: none;
+      color: $color-white;
+    }
+  }
+}
+
+.pv-tab-active {
+  background-color: $color-red;
+}
+
+.pv-tab-inactive {
+  background-color: $color-darker;
+  > button {
+    cursor: pointer;
+  }
+}
+
+.pv-content {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  > button {
+    width: 100%;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    > img {
+      width: 100%;
+      height: auto;
+      max-height: 80%;
+    }
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.closeButton {
+  position: fixed;
+  right: 4%;
+  top: 4%;
+  color: $color-white;
+  font-size: 2rem;
+  pointer-events: none;
+}
+.player {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.playButton {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+$IconSize: 40px;
+.playIcon {
+  position: absolute;
+  top: calc(50% - $IconSize / 2);
+  left: calc(50% - $IconSize / 2);
+  font-size: $IconSize;
+  color: $color-youtube;
+}
