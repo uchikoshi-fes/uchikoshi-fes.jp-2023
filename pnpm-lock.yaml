@@ -14,6 +14,9 @@ dependencies:
   '@types/react-dom':
     specifier: 18.2.4
     version: 18.2.4
+  '@types/react-modal':
+    specifier: ^3.16.0
+    version: 3.16.0
   eslint:
     specifier: 8.42.0
     version: 8.42.0
@@ -747,6 +750,15 @@ packages:
     resolution:
       {
         integrity: sha512-G2mHoTMTL4yoydITgOGwWdWMVd8sNgyEP85xVmMKAPUBwQWm9wBPQUmvbeF4V3WBY1P7mmL4BkjQ0SqUpf1snw==,
+      }
+    dependencies:
+      '@types/react': 18.2.8
+    dev: false
+
+  /@types/react-modal@3.16.0:
+    resolution:
+      {
+        integrity: sha512-iphdqXAyUfByLbxJn5j6d+yh93dbMgshqGP0IuBeaKbZXx0aO+OXsvEkt6QctRdxjeM9/bR+Gp3h9F9djVWTQQ==,
       }
     dependencies:
       '@types/react': 18.2.8
