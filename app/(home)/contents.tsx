@@ -4,7 +4,7 @@ import { useState, ReactNode, useRef, useEffect } from 'react'
 import { useInView, motion } from 'framer-motion'
 import { BsLine, BsYoutube, BsTwitter, BsInstagram } from 'react-icons/bs'
 import { FaChevronRight } from 'react-icons/fa'
-import Link from '../link'
+import Link from '@components/common/link'
 import styles from './contents.module.scss'
 import Countdown from './countdown'
 import PromotionVideos from './promotion-videos'
@@ -104,31 +104,43 @@ const Sns = () => {
   return (
     <div className={styles.sns}>
       <div className={styles.snsIcon}>
-        <Link href='https://line.me/R/ti/p/@136ffgbc'>
+        <Link href='https://line.me/R/ti/p/@136ffgbc' alia-label='公式LINE'>
           <span className={styles.line}>
             <BsLine />
           </span>
+          <div tabIndex={0} className={styles['visually-hidden']}>
+            <span>LINE</span>
+          </div>
         </Link>
       </div>
       <div className={styles.snsIcon}>
-        <Link href='https://youtube.com/c/uchikoshi-fes'>
+        <Link href='https://youtube.com/c/uchikoshi-fes' alia-label='公式YouTube'>
           <span className={styles.youtube}>
             <BsYoutube />
           </span>
+          <div tabIndex={0} className={styles['visually-hidden']}>
+            <span>YouTube</span>
+          </div>
         </Link>
       </div>
       <div className={styles.snsIcon}>
-        <Link href='https://twitter.com/uchikoshifes'>
+        <Link href='https://twitter.com/uchikoshifes' alia-label='公式Twitter'>
           <span className={styles.twitter}>
             <BsTwitter />
           </span>
+          <div tabIndex={0} className={styles['visually-hidden']}>
+            <span>Twitter</span>
+          </div>
         </Link>
       </div>
       <div className={styles.snsIcon}>
-        <Link href='https://instagram.com/uchikoshifes'>
+        <Link href='https://instagram.com/uchikoshifes' alia-label='公式Instagram'>
           <span className={styles.instagram}>
             <BsInstagram />
           </span>
+          <div tabIndex={0} className={styles['visually-hidden']}>
+            <span>Instagram</span>
+          </div>
         </Link>
       </div>
     </div>
@@ -138,24 +150,41 @@ const Sns = () => {
 const Top = () => {
   return (
     <div className={styles.top}>
-      <div className={styles.objectStyle}>
-        <object type='image/svg+xml' data='kaika-sengen.svg' width='390' height='200'></object>
+      <Image
+        src='top-background-img.jpg'
+        alt='浅野の校舎の画像'
+        className={styles['top-background-img']}
+        width={2048}
+        height={1536}
+        loading='eager'
+      />
+      <div className={styles['top-contents']}>
+        <div className={styles.objectStyle}>
+          <object
+            title='カイカ宣言'
+            type='image/svg+xml'
+            data='kaika-sengen.svg'
+            width='300'
+            height='200'
+            className={styles['kaika-sengen']}
+          ></object>
+        </div>
+        <motion.div
+          className={styles.titleContainer}
+          initial={{ opacity: 0.001 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 1,
+            delay: 5,
+            ease: 'easeInOut',
+          }}
+        >
+          <h1 className={styles.title}>打越祭</h1>
+          <p className={styles.date}>9/17・9/18</p>
+          <p className={styles['no-rsv-no-lim']}>予約不要・人数制限なし</p>
+          <Sns />
+        </motion.div>
       </div>
-      <motion.div
-        className={styles.titleContainer}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          duration: 1,
-          delay: 5,
-          ease: 'easeInOut',
-        }}
-      >
-        <h1 className={styles.title}>打越祭</h1>
-        <p className={styles.date}>9/17・9/18</p>
-        <p className={styles['no-rsv-no-lim']}>予約不要・人数制限なし</p>
-        <Sns />
-      </motion.div>
     </div>
   )
 }
@@ -163,8 +192,8 @@ const Top = () => {
 const Slogan = () => {
   return (
     <div className={styles.slogan}>
-      <h6 className={styles.smallTitle}>スローガン</h6>
-      <h2 className={styles.largeTitle}> カイカ宣言 </h2>
+      <h2 className={styles.smallTitle}>スローガン</h2>
+      <h3 className={styles.largeTitle}> カイカ宣言 </h3>
       <p>
         <>
           コロナ禍からようやく活路を見出し、制約を受けずに「開禍」した文化祭を開催できる状況になりつつあります。
@@ -177,22 +206,11 @@ const Slogan = () => {
   )
 }
 
-// const Pv = () => {
-//   return (
-//     <div className={styles.pv}>
-//       <h2 className={styles.largeTitle}>PV</h2>
-//       <Image src='PV.png' alt='PV is coming soon.' width='300' height='300' priority={false} />
-//       <p>Official PV is coming soon!</p>
-//       <p>公式PV完成までもう少しだけお待ちください！</p>
-//     </div>
-//   )
-// }
-
 const Overview = () => {
   return (
     <div className={styles.overview}>
-      <h6 className={styles.smallTitle}>概要</h6>
-      <h2 className={styles.largeTitle}> 第44回 打越祭 </h2>
+      <h2 className={styles.smallTitle}>概要</h2>
+      <h3 className={styles.largeTitle}> 第44回 打越祭 </h3>
       <div className={styles.detail}>
         <ul>
           <li>
@@ -224,6 +242,7 @@ const GoogleMaps = () => {
         allowFullScreen={false}
         loading='lazy'
         referrerPolicy='no-referrer-when-downgrade'
+        title='浅野中学校・高等学校周辺の地図'
       >
         ロード中...
       </iframe>
