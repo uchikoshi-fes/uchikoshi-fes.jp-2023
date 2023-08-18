@@ -7,6 +7,7 @@ import { FaChevronRight } from 'react-icons/fa'
 import Link from '@components/common/link'
 import styles from './contents.module.scss'
 import Countdown from './countdown'
+import PromotionVideos from './promotion-videos'
 
 const Contents = () => {
   const [Style, setStyle] = useState('')
@@ -49,7 +50,7 @@ const Contents = () => {
         setStyle={handleClickStyle}
         setViewUpdate={handleViewUpdate}
       >
-        <Pv />
+        <PromotionVideos />
       </Content>
       <Content
         name={styles.overviewColor}
@@ -201,24 +202,6 @@ const Slogan = () => {
           そんな中で、私たちがこれまでできなかったことを「開化」させ、浅野生らしい個性の「開花」を感じることのできる文化祭を作り上げることを目指します。
         </>
       </p>
-    </div>
-  )
-}
-
-const Pv = () => {
-  return (
-    <div className={styles.pv}>
-      <h2 className={styles.largeTitle}>PV</h2>
-      <Image
-        src='PV.png'
-        alt='PV is coming soon.'
-        width='300'
-        height='300'
-        priority={false}
-        className={styles['pv-img']}
-      />
-      <p>Official PV is coming soon!</p>
-      <p>公式PV完成までもう少しだけお待ちください！</p>
     </div>
   )
 }
