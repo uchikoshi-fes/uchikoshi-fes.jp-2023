@@ -20,8 +20,7 @@ const MenuLinks = ({ narrow = false }: { narrow?: boolean }) => {
 
   return (
     <ul>
-      {links.map(({ href, name /*color*/ }: { href: string; name: string }) => {
-        console.log(pathname)
+      {links.map(({ href, name }: { href: string; name: string }) => {
         // 現在のページがこのリンク以下の場合は active にする
         let className
         if (href === '/' ? pathname === href : pathname !== null && pathname.startsWith(href)) {

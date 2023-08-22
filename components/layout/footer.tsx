@@ -1,40 +1,10 @@
 'use client'
-// // components
-// import { InView } from "react-intersection-observer";
-// import { Timeline as TwitterTL } from "react-twitter-widgets";
-//import Outline from "./outline";
-// styles
 import { ReactNode } from 'react'
 import { BsLine, BsYoutube, BsTwitter, BsInstagram } from 'react-icons/bs'
 import styles from './footer.module.scss'
-// icons
-// config
 import { links as menuLinks } from './menu'
 import Link from 'components/common/link'
 import PACKAGE from 'package.json'
-
-// const Tweets = ({ tweetLimit }) => {
-//   return (
-//     <section className={styles["tweets"]}>
-//       <h2 className={styles["tweets-title"]}>公式 Twitter</h2>
-//       <InView triggerOnce rootMargin="200px">
-//         {({ inView, ref }) => (
-//           <div className={styles["twitter-tl"]} ref={ref}>
-//             {inView && (
-//               <TwitterTL
-//                 dataSource={{
-//                   sourceType: "profile",
-//                   screenName: "uchikoshifes",
-//                 }}
-//                 options={{ tweetLimit }}
-//               />
-//             )}
-//           </div>
-//         )}
-//       </InView>
-//     </section>
-//   );
-// };
 
 const Sns = () => {
   return (
@@ -118,8 +88,6 @@ const Copyright = () => {
 const Footer = () => {
   return (
     <>
-      {/* <Tweets tweetLimit={5} /> */}
-      {/* <Outline /> */}
       <footer className={styles.footer}>
         <Menu />
         <Others />

@@ -91,7 +91,6 @@ const Content = ({
   })
   useEffect(() => {
     isInviw ? setStyle(name) : setViewUpdate(name)
-    //console.log('isInviw', name, isInviw)
   }, [name, isInviw, setStyle, setViewUpdate, viewUpdate])
   return (
     <div className={styles.content} ref={ref}>
@@ -159,16 +158,14 @@ const Top = () => {
         loading='eager'
       />
       <div className={styles['top-contents']}>
-        <div className={styles.objectStyle}>
-          <object
-            title='カイカ宣言'
-            type='image/svg+xml'
-            data='kaika-sengen.svg'
-            width='300'
-            height='200'
-            className={styles['kaika-sengen']}
-          ></object>
-        </div>
+        <object
+          title='カイカ宣言'
+          type='image/svg+xml'
+          data='kaika-sengen.svg'
+          width='300'
+          height='200'
+          className={styles['kaika-sengen']}
+        ></object>
         <motion.div
           className={styles.titleContainer}
           initial={{ opacity: 0.001 }}
@@ -243,9 +240,7 @@ const GoogleMaps = () => {
         loading='lazy'
         referrerPolicy='no-referrer-when-downgrade'
         title='浅野中学校・高等学校周辺の地図'
-      >
-        ロード中...
-      </iframe>
+      ></iframe>
     </div>
   )
 }
