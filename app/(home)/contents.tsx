@@ -2,15 +2,15 @@
 import Image from 'next/image'
 import { useState, ReactNode, useRef, useEffect } from 'react'
 import { useInView, motion } from 'framer-motion'
-import { BsLine, BsYoutube, BsTwitter, BsInstagram } from 'react-icons/bs'
 import { FaChevronRight } from 'react-icons/fa'
 import Link from '@components/common/link'
+import officialLinks from '@components/layout/social-media-links'
 import styles from './contents.module.scss'
 import Countdown from './countdown'
 import PromotionVideos from './promotion-videos'
 
 const Contents = () => {
-  const [Style, setStyle] = useState('')
+  const [Style, setStyle] = useState('topColor')
   const [viewUpdate, setViewUpdate] = useState('')
   function handleClickStyle(childStyle: string) {
     setStyle(childStyle)
@@ -102,46 +102,16 @@ const Content = ({
 const Sns = () => {
   return (
     <div className={styles.sns}>
-      <div className={styles.snsIcon}>
-        <Link href='https://line.me/R/ti/p/@136ffgbc' alia-label='公式LINE'>
-          <span className={styles.line}>
-            <BsLine />
-          </span>
+      {officialLinks.map(({ service, href, icon, text }) => (
+        <div className={styles.snsIcon} key={href}>
+          <Link href={href} alia-label={text}>
+            <span className={styles[service]}>{icon}</span>
+          </Link>
           <div tabIndex={0} className={styles['visually-hidden']}>
-            <span>LINE</span>
+            <span>{text}</span>
           </div>
-        </Link>
-      </div>
-      <div className={styles.snsIcon}>
-        <Link href='https://youtube.com/c/uchikoshi-fes' alia-label='公式YouTube'>
-          <span className={styles.youtube}>
-            <BsYoutube />
-          </span>
-          <div tabIndex={0} className={styles['visually-hidden']}>
-            <span>YouTube</span>
-          </div>
-        </Link>
-      </div>
-      <div className={styles.snsIcon}>
-        <Link href='https://twitter.com/uchikoshifes' alia-label='公式Twitter'>
-          <span className={styles.twitter}>
-            <BsTwitter />
-          </span>
-          <div tabIndex={0} className={styles['visually-hidden']}>
-            <span>Twitter</span>
-          </div>
-        </Link>
-      </div>
-      <div className={styles.snsIcon}>
-        <Link href='https://instagram.com/uchikoshifes' alia-label='公式Instagram'>
-          <span className={styles.instagram}>
-            <BsInstagram />
-          </span>
-          <div tabIndex={0} className={styles['visually-hidden']}>
-            <span>Instagram</span>
-          </div>
-        </Link>
-      </div>
+        </div>
+      ))}
     </div>
   )
 }

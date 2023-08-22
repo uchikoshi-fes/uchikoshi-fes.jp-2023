@@ -1,46 +1,22 @@
 'use client'
 import { ReactNode } from 'react'
-import { BsLine, BsYoutube, BsTwitter, BsInstagram } from 'react-icons/bs'
+import Link from '@components/common/link'
 import styles from './footer.module.scss'
 import { links as menuLinks } from './menu'
-import Link from 'components/common/link'
+import officialLinks from './social-media-links'
 import PACKAGE from 'package.json'
 
 const Sns = () => {
   return (
     <div className={styles.sns}>
-      <div className={styles['sns-line']}>
-        <Link href='https://line.me/R/ti/p/@136ffgbc'>
-          <span className={styles['sns-icon']}>
-            <BsLine />
-          </span>
-          公式 LINE を友だち追加
-        </Link>
-      </div>
-      <div className={styles['sns-youtube']}>
-        <Link href='https://youtube.com/c/uchikoshi-fes'>
-          <span className={styles['sns-icon']}>
-            <BsYoutube />
-          </span>
-          公式 YouTube をチャンネル登録
-        </Link>
-      </div>
-      <div className={styles['sns-twitter']}>
-        <Link href='https://twitter.com/uchikoshifes'>
-          <span className={styles['sns-icon']}>
-            <BsTwitter />
-          </span>
-          公式 Twitter をフォロー
-        </Link>
-      </div>
-      <div className={styles['sns-instagram']}>
-        <Link href='https://instagram.com/uchikoshifes'>
-          <span className={styles['sns-icon']}>
-            <BsInstagram />
-          </span>
-          公式 Instagram をフォロー
-        </Link>
-      </div>
+      {officialLinks.map(({ service, text, style, href, icon }) => (
+        <div className={styles[style]} key={href}>
+          <Link href={href} alia-label={`公式` + service}>
+            <span className={styles['sns-icon']}>{icon}</span>
+            {text}
+          </Link>
+        </div>
+      ))}
     </div>
   )
 }
@@ -99,3 +75,4 @@ const Footer = () => {
 }
 
 export default Footer
+export { officialLinks }
