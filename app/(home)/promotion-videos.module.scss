@@ -87,10 +87,11 @@
 .closeButton {
   position: fixed;
   right: 4%;
-  top: 4%;
+  top: 64px;
   color: $color-white;
   font-size: 2rem;
-  pointer-events: none;
+  cursor: pointer;
+  border: none;
 }
 .player {
   width: 100%;

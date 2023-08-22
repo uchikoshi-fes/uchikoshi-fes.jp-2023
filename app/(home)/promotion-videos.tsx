@@ -56,7 +56,7 @@ const PromotionVideos = () => {
         </ul>
 
         <div className={styles['pv-content']}>
-          <button onClick={() => setIsOpen(true)} className={styles.playButton}>
+          <button title='動画を観る' onClick={() => setIsOpen(true)} className={styles.playButton}>
             <Image
               src={'https://img.youtube.com/vi/' + getVideoId() + '/sddefault.jpg'}
               width='640'
@@ -71,7 +71,13 @@ const PromotionVideos = () => {
             ariaHideApp={false}
             style={customStyles}
           >
-            <FaRegWindowClose className={styles.closeButton} />
+            <button
+              title='動画を閉じる'
+              onClick={() => setIsOpen(false)}
+              className={styles.closeButton}
+            >
+              <FaRegWindowClose />
+            </button>
             {hasWindow && (
               <ReactPlayer
                 width='100%'
