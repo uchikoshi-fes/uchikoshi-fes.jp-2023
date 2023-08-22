@@ -2,8 +2,7 @@
 
 .countdown {
   @include container();
-  display: flex;
-  align-items: center;
+  @include vertical;
   height: 80vh;
   letter-spacing: 0.2rem;
   position: relative;
