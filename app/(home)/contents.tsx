@@ -10,6 +10,38 @@ import Countdown from './countdown'
 import PromotionVideos from './promotion-videos'
 
 const Contents = () => {
+  const contentsList = [
+    {
+      name: 'top',
+      style: 'topColor',
+      component: <Top />,
+    },
+    {
+      name: 'slogan',
+      style: 'sloganColor',
+      component: <Slogan />,
+    },
+    {
+      name: 'countdown',
+      style: 'countdownColor',
+      component: <Countdown />,
+    },
+    {
+      name: 'pv',
+      style: 'pvColor',
+      component: <PromotionVideos />,
+    },
+    {
+      name: 'overview',
+      style: 'overviewColor',
+      component: <Overview />,
+    },
+    {
+      name: 'access',
+      style: 'accessColor',
+      component: <Access />,
+    },
+  ]
   const [Style, setStyle] = useState('topColor')
   const [viewUpdate, setViewUpdate] = useState('')
   function handleClickStyle(childStyle: string) {
@@ -20,54 +52,17 @@ const Contents = () => {
   }
   return (
     <div className={Style}>
-      <Content
-        name={styles.topColor}
-        viewUpdate={viewUpdate}
-        setStyle={handleClickStyle}
-        setViewUpdate={handleViewUpdate}
-      >
-        <Top />
-      </Content>
-      <Content
-        name={styles.sloganColor}
-        viewUpdate={viewUpdate}
-        setStyle={handleClickStyle}
-        setViewUpdate={handleViewUpdate}
-      >
-        <Slogan />
-      </Content>
-      <Content
-        name={styles.countdownColor}
-        viewUpdate={viewUpdate}
-        setStyle={handleClickStyle}
-        setViewUpdate={handleViewUpdate}
-      >
-        <Countdown />
-      </Content>
-      <Content
-        name={styles.pvColor}
-        viewUpdate={viewUpdate}
-        setStyle={handleClickStyle}
-        setViewUpdate={handleViewUpdate}
-      >
-        <PromotionVideos />
-      </Content>
-      <Content
-        name={styles.overviewColor}
-        viewUpdate={viewUpdate}
-        setStyle={handleClickStyle}
-        setViewUpdate={handleViewUpdate}
-      >
-        <Overview />
-      </Content>
-      <Content
-        name={styles.accessColor}
-        viewUpdate={viewUpdate}
-        setStyle={handleClickStyle}
-        setViewUpdate={handleViewUpdate}
-      >
-        <Access />
-      </Content>
+      {contentsList.map(({ name, style, component }) => (
+        <Content
+          name={styles[style]}
+          key={name}
+          setStyle={handleClickStyle}
+          viewUpdate={viewUpdate}
+          setViewUpdate={handleViewUpdate}
+        >
+          {component}
+        </Content>
+      ))}
     </div>
   )
 }
