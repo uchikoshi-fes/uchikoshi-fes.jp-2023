@@ -42,9 +42,9 @@ $easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
   top: 0;
   left: -320px;
   z-index: 102;
-  background-color: rgba($color-darker, 0.6);
+  background-color: rgba($color-header-background, 0.6);
   transition: left 0.4s $easeOutQuart;
-  color: $color-white;
+  color: $color-header-text;
 }
 
 .narrow-open {
@@ -63,7 +63,7 @@ $easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
   line-height: header.$content-height;
   font-size: header.$content-height;
   text-align: left;
-  background-color: $color-darker;
+  background-color: $color-header-background;
 }
 
 .narrow-content {
@@ -88,11 +88,11 @@ $easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
 
 .narrow-active > a {
   border-right: 8px solid;
-  color: $color-white;
-  background-color: rgba($color-white, 0.2);
+  color: $color-header-text;
+  background-color: rgba($color-header-text, 0.2);
 }
 .narrow-inactive > a {
-  color: $color-white;
+  color: $color-header-text;
 }
 .narrows-site-name {
   height: header.$header-height;
@@ -104,7 +104,7 @@ $easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
   a {
     height: 100%;
     text-decoration: none;
-    color: $color-white;
+    color: $color-header-text;
   }
 }
 // wide
@@ -137,9 +137,9 @@ $easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
 
 .wide-active > a {
   border-bottom: 2px solid;
-  color: $color-white;
-  background-color: rgba($color-white, 0.2);
+  color: $color-header-text;
+  background-color: rgba($color-header-text, 0.2);
 }
 .wide-inactive > a {
-  color: $color-white;
+  color: $color-header-text;
 }
