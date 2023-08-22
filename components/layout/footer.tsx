@@ -75,4 +75,3 @@ const Footer = () => {
 }
 
 export default Footer
-export { officialLinks }
