@@ -3,7 +3,11 @@
 
 .promotion-videos {
   padding: 30px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  height: 100%;
   > h2 {
     margin: 1rem;
   }
@@ -23,9 +27,10 @@
 }
 
 .pv-window {
-  width: 60%;
-  margin: 0 auto;
   color: $color-darker;
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
   @include md {
     width: 100%;
   }
@@ -37,7 +42,7 @@
   padding: 0;
   display: flex;
   list-style: none;
-
+  flex: none;
   > li {
     height: 3rem;
     flex: 1;
@@ -65,7 +70,7 @@
 .pv-content {
   width: 100%;
   aspect-ratio: 16 / 9;
-
+  flex: 1 1 0%;
   > button {
     width: 100%;
     border: none;
