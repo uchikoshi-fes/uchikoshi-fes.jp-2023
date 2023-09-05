@@ -151,7 +151,7 @@ const Top = () => {
   return (
     <div className={styles.top}>
       <Image
-        src='top-background-img.jpg'
+        src='top-background-img.webp'
         alt='浅野の校舎の画像'
         className={styles['top-background-img']}
         width={2048}
