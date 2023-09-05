@@ -151,12 +151,13 @@ const Top = () => {
   return (
     <div className={styles.top}>
       <Image
-        src='top-background-img.jpg'
+        src='top-background-img.webp'
         alt='浅野の校舎の画像'
         className={styles['top-background-img']}
         width={2048}
         height={1536}
         loading='eager'
+        sizes='(max-width: 2048px) 2048px, 100vw'
       />
       <div className={styles['top-contents']}>
         <div className={styles.objectStyle}>
