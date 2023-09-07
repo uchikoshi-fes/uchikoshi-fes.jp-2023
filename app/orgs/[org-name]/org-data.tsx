@@ -6,8 +6,8 @@ import { MDXProvider, useMDXComponents } from '@mdx-js/react'
 import { MDXComponents } from 'mdx/types'
 //import { NextSeo } from 'next-seo'
 import Link from '@components/common/link'
+import { CATEGORIES, AREAS } from '../categories'
 import { fetchOrganizationDescription } from '../fetch'
-import { CATEGORIES, AREAS } from '../page'
 import styles from './page.module.scss'
 
 const OrgData = (props: any) => {

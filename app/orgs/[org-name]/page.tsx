@@ -5,12 +5,18 @@
 // import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 // import { faTag, faLocationDot, faPeopleGroup } from '@fortawesome/free-solid-svg-icons'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fetchOrganizations, fetchOrganization, fetchOrganizationDescription } from '../fetch'
+import { fetchOrganization, fetchOrganizations } from '../fetch'
 import OrgData from './org-data'
 // styles
 // icons
 // config
+export async function generateStaticParams() {
+  const posts = await fetchOrganizations()
 
+  return posts.map((post) => ({
+    'org-name': post.name,
+  }))
+}
 const Organization = async ({ params }: { params: { 'org-name': string } }) => {
   // const params = (await fetchOrganizations()).map((org) => ({
   //   params: { 'org-name': org.name },

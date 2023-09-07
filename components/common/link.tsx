@@ -10,7 +10,7 @@ const Link = ({
   href?: string
   children?: ReactNode
   className?: string
-}): ReactNode => {
+}) => {
   // internal link
   if ((href && href.startsWith('/')) || href === '') {
     return (
