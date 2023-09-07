@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+let nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
@@ -7,4 +7,15 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+nextConfig = require('@next/mdx')({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+    // If you use `MDXProvider`, uncomment the following line.
+    //providerImportSource: '@mdx-js/react',
+  },
+})(nextConfig)
+
+console.log(nextConfig)
+module.exports = () => nextConfig
