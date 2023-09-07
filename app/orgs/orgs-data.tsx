@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import Link from '@components/common/link'
-import { AREAS, CATEGORIES } from './page'
+import { CATEGORIES } from './page'
 import styles from './page.module.scss'
 import useClient from 'hooks/client'
 import { useSmallerThan } from 'hooks/useWindowSize'
@@ -49,7 +49,7 @@ const OrgDats = ({
   return (
     <>
       <ul className={styles.categories}>
-        {CATEGORIES.map(({ id, name, icon }) => {
+        {CATEGORIES.map(({ name, icon }) => {
           const isActive = name === categoryId
           const isShowFull = !isClient || isWide || (!isNarrow && isActive)
           return (
@@ -58,11 +58,7 @@ const OrgDats = ({
               key={name}
             >
               <button onClick={() => setCategoryId(name)}>
-                {/* <FontAwesomeIcon
-                            icon={icon}
-                            size='lg'
-                            className={isShowFull ? styles['icon-left'] : ''}
-                          /> */}
+                {icon}
                 {(isShowFull && name) || 'その他'}
               </button>
             </li>

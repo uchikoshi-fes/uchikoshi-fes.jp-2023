@@ -1,29 +1,25 @@
-// import {
-//   faFileContract,
-//   faUtensils,
-//   faDice,
-//   faMicrophone,
-//   faPersonRunning,
-//   faBurger,
-//   faCartShopping,
-// } from '@fortawesome/free-solid-svg-icons'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { NextSeo } from 'next-seo'
-//import { useMediaQuery } from 'react-responsive'
-import { get } from 'http'
+import {
+  BsFillHouseFill,
+  BsBank,
+  BsFillBalloonFill,
+  BsThreeDots,
+  BsMegaphoneFill,
+  BsCartFill,
+} from 'react-icons/bs'
+import { FaCoffee, FaThermometer } from 'react-icons/fa'
 import { fetchOrganizations } from './fetch'
 import OrgDats from './orgs-data'
 import styles from './page.module.scss'
 
 const CATEGORIES = [
-  { id: 'all', name: '全て', icon: 'faPersonRunning' },
-  { id: 'exhibition', name: '展示', icon: 'faFileContract' },
-  { id: 'cafe', name: '喫茶', icon: 'faUtensils' },
-  { id: 'stand', name: '屋台', icon: 'faBurger' },
-  { id: 'performance', name: '公演', icon: 'faMicrophone' },
-  { id: 'amusement', name: 'アミューズメント', icon: 'faDice' },
-  { id: 'shop', name: '販売', icon: 'faCartShopping' },
-  { id: 'other', name: 'その他', icon: 'faPersonRunning' },
+  { id: 'all', name: '全て', icon: <BsFillHouseFill /> },
+  { id: 'exhibition', name: '展示', icon: <BsBank /> },
+  { id: 'cafe', name: '喫茶', icon: <FaCoffee /> },
+  { id: 'stand', name: '屋台', icon: <FaThermometer /> },
+  { id: 'performance', name: '公演', icon: <BsMegaphoneFill /> },
+  { id: 'amusement', name: 'アミューズメント', icon: <BsFillBalloonFill /> },
+  { id: 'shop', name: '販売', icon: <BsCartFill /> },
+  { id: 'other', name: 'その他', icon: <BsThreeDots /> },
 ]
 
 const AREAS = [
@@ -69,15 +65,6 @@ const Organizations = async () => {
     </>
   )
 }
-const getStaticProps = async () => {
-  console.log('getStaticProps _ Fetching organizations')
-  const organizations = await fetchOrganizations()
-  return {
-    props: {
-      organizations,
-    },
-  }
-}
 
 export default Organizations
-export { CATEGORIES, AREAS, getStaticProps }
+export { CATEGORIES, AREAS }

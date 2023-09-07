@@ -1,5 +1,4 @@
 import fs from 'fs'
-// import { AREAS } from "@/pages/orgs/index";
 const fileSystem = fs
 const importOrganization = async (name: string) => {
   console.log('importOrganization')
