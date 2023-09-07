@@ -7,12 +7,12 @@ const Link = ({
   className,
   ...props
 }: {
-  href: string
+  href?: string
   children?: ReactNode
   className?: string
-}) => {
+}): ReactNode => {
   // internal link
-  if (href.startsWith('/') || href === '') {
+  if ((href && href.startsWith('/')) || href === '') {
     return (
       <NextLink href={href} className={className} {...props}>
         {children}
