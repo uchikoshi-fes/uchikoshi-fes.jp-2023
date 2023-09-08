@@ -59,7 +59,7 @@ const OrgDats = ({
             >
               <button onClick={() => setCategoryId(name)}>
                 {icon}
-                {(isShowFull && name) || 'その他'}
+                {isShowFull && (name || 'その他')}
               </button>
             </li>
           )
