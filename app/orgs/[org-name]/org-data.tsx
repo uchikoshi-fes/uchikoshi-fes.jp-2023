@@ -2,8 +2,7 @@
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import React from 'react'
-import { MDXProvider, useMDXComponents } from '@mdx-js/react'
-import { MDXComponents } from 'mdx/types'
+import { MDXProvider } from '@mdx-js/react'
 //import { NextSeo } from 'next-seo'
 import Link from '@components/common/link'
 import { CATEGORIES, AREAS } from '../categories'
@@ -19,29 +18,6 @@ const OrgData = (props: any) => {
   const Description = dynamic(() => fetchOrganizationDescription(prop.name), {
     loading: () => <div className={styles['description-loading']}>(読込中...)</div>,
   })
-  const mdxComponents: MDXComponents = {
-    p: (prop) => <pre className={styles.paragraph}>{prop.children}</pre>,
-    a: (prop) => <Link href={prop.href}>{prop.children}</Link>,
-    img: (prop) => (
-      <div className={styles.image}>
-        <Image
-          title={prop.title}
-          src={prop.src}
-          alt={prop.alt}
-          sizes='80vw'
-          height={prop.height}
-          width={prop.width}
-          style={{
-            width: '80%',
-            height: 'auto',
-          }}
-          {...props}
-        />
-        <div>{prop.title}</div>
-      </div>
-    ),
-  }
-  const components = useMDXComponents(mdxComponents)
   return (
     <>
       {/* <NextSeo
@@ -96,7 +72,7 @@ const OrgData = (props: any) => {
         </div>
         <div className={styles.description}>
           <h1>{prop.name}</h1>
-          <MDXProvider components={components}>
+          <MDXProvider>
             <Description />
           </MDXProvider>
         </div>
