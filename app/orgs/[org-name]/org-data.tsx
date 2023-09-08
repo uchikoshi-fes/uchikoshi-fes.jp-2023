@@ -17,6 +17,7 @@ const OrgData = (props: any) => {
   console.log(Object.keys(prop))
   const Description = dynamic(() => fetchOrganizationDescription(prop.name), {
     loading: () => <div className={styles['description-loading']}>(読込中...)</div>,
+    ssr: false,
   })
   return (
     <>

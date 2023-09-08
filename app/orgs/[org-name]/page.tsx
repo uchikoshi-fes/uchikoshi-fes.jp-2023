@@ -7,9 +7,6 @@
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fetchOrganization, fetchOrganizations } from '../fetch'
 import OrgData from './org-data'
-// styles
-// icons
-// config
 export async function generateStaticParams() {
   const posts = await fetchOrganizations()
 
