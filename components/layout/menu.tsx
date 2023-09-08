@@ -12,7 +12,7 @@ const links = [
   // { href: '/events', name: 'イベント' },
   // { href: '/radio', name: 'アサノラジオ' },
   // { href: '/articles', name: '記事' },
-  // { href: '/q&a', name: 'Q&A' },
+  { href: '/faq', name: 'Q&A' },
 ]
 
 const MenuLinks = ({ narrow = false }: { narrow?: boolean }) => {
