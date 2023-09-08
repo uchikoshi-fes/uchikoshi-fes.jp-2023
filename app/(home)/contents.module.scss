@@ -3,82 +3,105 @@
 
 .topColor {
   background-color: $color-white;
-  color: white;
+  color: $color-gray;
   transition: all 1s ease-out;
 }
 .sloganColor {
   background-color: $color-red;
-  color: white;
+  color: $color-white;
   transition: all 1s ease-out;
 }
 .countdownColor {
   background-color: $color-purple;
-  color: white;
+  color: $color-white;
   transition: all 1s ease-out;
 }
 .pvColor {
   background-color: $color-green;
-  color: white;
+  color: $color-white;
   transition: all 1s ease-out;
 }
 .overviewColor {
   background-color: $color-blue;
-  color: white;
+  color: $color-white;
   transition: all 1s ease-out;
 }
 .accessColor {
   background-color: $color-yellow;
-  color: black;
+  color: $color-darker;
   transition: all 1s ease-out;
 }
 .content {
-  height: 100vh;
+  height: auto;
+  min-height: 600px;
   font-family: serif;
+}
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  &:focus {
+    overflow: hidden;
+    height: auto;
+    width: auto;
+    clip-path: inset(0%);
+  }
 }
 
 .top {
   height: 100vh;
-  background: url('/top-background-img.jpg') no-repeat center / cover;
-  filter: grayscale(20%);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  text-shadow: gray 1px 1px;
-}
-.title {
-  font-size: 48px;
-  letter-spacing: 0.2rem;
-  margin: 0;
-  text-align: center;
-  padding: 0 0.05em;
-  line-height: 100%;
-}
-.date {
-  font-size: 48px;
-  letter-spacing: 0.2rem;
-  margin: 0;
-  text-align: center;
-  padding: 0 0.05em;
-  line-height: 100%;
-}
-.no-rsv-no-lim {
-  font-size: 30px;
-  letter-spacing: 0.2rem;
-  margin: 0;
-  text-align: center;
-  padding: 0 0.05em;
-  line-height: 100%;
-  text-decoration: underline;
-}
-.titleContainer {
-  width: 100vw;
+  min-height: 600px;
+  @include vertical;
+  align-items: flex-start;
+  color: $color-white;
+  text-shadow: $color-gray 1px 1px;
+
+  .top-background-img {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    min-height: 600px;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(20%);
+  }
+  .top-contents {
+    @include vertical;
+    align-items: center;
+    z-index: 1;
+    .kaika-sengen {
+      max-width: 100%;
+    }
+  }
 }
 
-.objectStyle {
-  display: flex;
-  justify-content: center;
+.titleContainer {
+  width: 100vw;
+  %top-text {
+    letter-spacing: 0.2rem;
+    margin: 0;
+    text-align: center;
+    padding: 0 0.05em;
+    line-height: 100%;
+  }
+  .title {
+    font-size: 48px;
+    @extend %top-text;
+  }
+  .date {
+    font-size: 48px;
+    @extend %top-text;
+  }
+  .no-rsv-no-lim {
+    font-size: 30px;
+    @extend %top-text;
+    text-decoration: underline;
+  }
 }
 
 .sns {
@@ -86,70 +109,55 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  .snsIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 25%;
 
-.snsIcon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    > a {
+      margin-left: 2rem;
+      margin-right: 2rem;
+      > div {
+        color: $color-white;
+      }
+    }
+    %icon {
+      font-size: 2.5rem;
+      color: $color-white;
+      transition: color 0.3s ease;
+    }
 
-  > a {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-}
+    .YouTube {
+      @extend %icon;
 
-%icon {
-  font-size: 2.5rem;
-  color: $color-white;
-  transition: color 0.3s ease;
-}
+      &:hover {
+        color: $color-youtube;
+      }
+    }
 
-.youtube {
-  @extend %icon;
+    .Twitter {
+      @extend %icon;
 
-  &:hover {
-    color: $color-youtube;
-  }
-}
+      &:hover {
+        color: $color-twitter;
+      }
+    }
 
-.twitter {
-  @extend %icon;
+    .Instagram {
+      @extend %icon;
 
-  &:hover {
-    color: $color-twitter;
-  }
-}
+      &:hover {
+        color: $color-instagram;
+      }
+    }
 
-.instagram {
-  @extend %icon;
+    .LINE {
+      @extend %icon;
 
-  &:hover {
-    color: $color-instagram;
-  }
-}
-
-.line {
-  @extend %icon;
-
-  &:hover {
-    color: $color-line;
-  }
-}
-
-.slogan {
-  @include container();
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 80vh;
-  font-family: serif;
-
-  > div {
-    > p {
-      padding: 15px 0;
+      &:hover {
+        color: $color-line;
+      }
     }
   }
 }
@@ -167,39 +175,38 @@
   margin: 0;
 }
 
-.pv {
+.slogan {
   @include container();
-  text-align: center;
-  display: flex;
-  justify-content: center;
+  @include vertical;
   align-items: center;
-  flex-direction: column;
   height: 80vh;
+  min-height: 600px;
+  font-family: serif;
+
+  > div {
+    > p {
+      padding: 15px 0;
+    }
+  }
 }
 
 .overview {
   @include container();
-  display: flex;
-  text-align: center;
-  justify-content: center;
+  @include vertical;
   align-items: center;
-  flex-direction: column;
   height: 80vh;
+  min-height: 600px;
   font-family: serif;
   .detail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include vertical;
   }
   li {
     list-style: none;
-    display: flex;
-    flex-direction: column;
+    @include vertical;
     align-items: center;
   }
   ul {
-    display: flex;
-    flex-direction: column;
+    @include vertical;
     align-items: center;
     padding: 0;
     line-height: 1.1;
@@ -207,24 +214,28 @@
   .subheading {
     font-size: 1.2rem;
     margin: 15px 0 0 2px;
-    text-decoration: underline #fff;
+    text-decoration: underline;
+  }
+}
+
+.map {
+  background-color: gray;
+  > iframe {
+    height: 50vh;
+    width: 60vw;
+
+    @include sm {
+      width: 90vw;
+    }
   }
 }
 
 .access {
   @include container();
-  text-align: center;
-  display: flex;
-  justify-content: center;
+  @include vertical;
   align-items: center;
-  flex-direction: column;
-  height: 80vh;
-}
-
-.access-content-wrap {
-  display: flex;
-  margin-top: 50px;
-  gap: 40px;
+  max-height: 100%;
+  min-height: 600px;
 }
 
 .access-content {
@@ -241,34 +252,21 @@
     margin: 5px 0;
     font-family: var(--font-noto-sans-jp);
   }
-}
+  .access-content-title {
+    letter-spacing: 0.1rem;
+    position: relative;
 
-.access-content-title {
-  letter-spacing: 0.1rem;
-  position: relative;
-
-  &::before {
-    content: '';
-    width: 10px;
-    height: 1px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-  }
-}
-
-.map {
-  background-color: gray;
-  > iframe {
-    height: 50vh;
-    width: 60vw;
-
-    @include sm {
-      width: 90vw;
+    &::before {
+      content: '';
+      width: 10px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      left: 0;
     }
   }
-}
 
-.route-button {
-  margin: 30px 0 0;
+  .route-button {
+    margin: 30px 0 0;
+  }
 }

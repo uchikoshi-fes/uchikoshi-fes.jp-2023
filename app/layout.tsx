@@ -1,5 +1,7 @@
 import './globals.scss'
 import { Noto_Sans_JP } from 'next/font/google'
+import Footer from 'components/layout/footer'
+import Header from 'components/layout/header'
 
 const notoSansJp = Noto_Sans_JP({
   subsets: ['latin'],
@@ -16,7 +18,11 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='ja' className={notoSansJp.variable}>
-      <body>{children}</body>
+      <body>
+        <Header></Header>
+        {children}
+        <Footer></Footer>
+      </body>
     </html>
   )
 }
