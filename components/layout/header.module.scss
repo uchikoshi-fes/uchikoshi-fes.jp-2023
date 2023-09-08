@@ -16,8 +16,8 @@ $content-padding: ($header-height - $content-height) / 2;
   z-index: 100;
   transition: all ease-in-out 500ms;
   font-family: 'Noto Serif JP', serif;
-  color: $color-white;
-  background-color: rgba($color-darker, 0.5);
+  color: $color-header-text;
+  background-color: rgba($color-header-background, 0.6);
 }
 
 .site-name {
@@ -33,6 +33,6 @@ $content-padding: ($header-height - $content-height) / 2;
     line-height: $content-height;
     font-size: $content-height;
     word-break: keep-all;
-    color: $color-white;
+    color: $color-header-text;
   }
 }

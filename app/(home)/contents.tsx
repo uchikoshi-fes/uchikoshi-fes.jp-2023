@@ -2,15 +2,47 @@
 import Image from 'next/image'
 import { useState, ReactNode, useRef, useEffect } from 'react'
 import { useInView, motion } from 'framer-motion'
-import { BsLine, BsYoutube, BsTwitter, BsInstagram } from 'react-icons/bs'
 import { FaChevronRight } from 'react-icons/fa'
 import Link from '@components/common/link'
+import officialLinks from '@components/layout/social-media-links'
 import styles from './contents.module.scss'
 import Countdown from './countdown'
 import PromotionVideos from './promotion-videos'
 
 const Contents = () => {
-  const [Style, setStyle] = useState('')
+  const contentsList = [
+    {
+      name: 'top',
+      style: 'topColor',
+      component: <Top />,
+    },
+    {
+      name: 'slogan',
+      style: 'sloganColor',
+      component: <Slogan />,
+    },
+    {
+      name: 'countdown',
+      style: 'countdownColor',
+      component: <Countdown />,
+    },
+    {
+      name: 'pv',
+      style: 'pvColor',
+      component: <PromotionVideos />,
+    },
+    {
+      name: 'overview',
+      style: 'overviewColor',
+      component: <Overview />,
+    },
+    {
+      name: 'access',
+      style: 'accessColor',
+      component: <Access />,
+    },
+  ]
+  const [Style, setStyle] = useState('topColor')
   const [viewUpdate, setViewUpdate] = useState('')
   function handleClickStyle(childStyle: string) {
     setStyle(childStyle)
@@ -20,54 +52,17 @@ const Contents = () => {
   }
   return (
     <div className={Style}>
-      <Content
-        name={styles.topColor}
-        viewUpdate={viewUpdate}
-        setStyle={handleClickStyle}
-        setViewUpdate={handleViewUpdate}
-      >
-        <Top />
-      </Content>
-      <Content
-        name={styles.sloganColor}
-        viewUpdate={viewUpdate}
-        setStyle={handleClickStyle}
-        setViewUpdate={handleViewUpdate}
-      >
-        <Slogan />
-      </Content>
-      <Content
-        name={styles.countdownColor}
-        viewUpdate={viewUpdate}
-        setStyle={handleClickStyle}
-        setViewUpdate={handleViewUpdate}
-      >
-        <Countdown />
-      </Content>
-      <Content
-        name={styles.pvColor}
-        viewUpdate={viewUpdate}
-        setStyle={handleClickStyle}
-        setViewUpdate={handleViewUpdate}
-      >
-        <PromotionVideos />
-      </Content>
-      <Content
-        name={styles.overviewColor}
-        viewUpdate={viewUpdate}
-        setStyle={handleClickStyle}
-        setViewUpdate={handleViewUpdate}
-      >
-        <Overview />
-      </Content>
-      <Content
-        name={styles.accessColor}
-        viewUpdate={viewUpdate}
-        setStyle={handleClickStyle}
-        setViewUpdate={handleViewUpdate}
-      >
-        <Access />
-      </Content>
+      {contentsList.map(({ name, style, component }) => (
+        <Content
+          name={styles[style]}
+          key={name}
+          setStyle={handleClickStyle}
+          viewUpdate={viewUpdate}
+          setViewUpdate={handleViewUpdate}
+        >
+          {component}
+        </Content>
+      ))}
     </div>
   )
 }
@@ -91,7 +86,6 @@ const Content = ({
   })
   useEffect(() => {
     isInviw ? setStyle(name) : setViewUpdate(name)
-    //console.log('isInviw', name, isInviw)
   }, [name, isInviw, setStyle, setViewUpdate, viewUpdate])
   return (
     <div className={styles.content} ref={ref}>
@@ -103,46 +97,16 @@ const Content = ({
 const Sns = () => {
   return (
     <div className={styles.sns}>
-      <div className={styles.snsIcon}>
-        <Link href='https://line.me/R/ti/p/@136ffgbc' alia-label='公式LINE'>
-          <span className={styles.line}>
-            <BsLine />
-          </span>
+      {officialLinks.map(({ service, href, icon, text }) => (
+        <div className={styles.snsIcon} key={href}>
+          <Link href={href} alia-label={text}>
+            <span className={styles[service]}>{icon}</span>
+          </Link>
           <div tabIndex={0} className={styles['visually-hidden']}>
-            <span>LINE</span>
+            <span>{text}</span>
           </div>
-        </Link>
-      </div>
-      <div className={styles.snsIcon}>
-        <Link href='https://youtube.com/c/uchikoshi-fes' alia-label='公式YouTube'>
-          <span className={styles.youtube}>
-            <BsYoutube />
-          </span>
-          <div tabIndex={0} className={styles['visually-hidden']}>
-            <span>YouTube</span>
-          </div>
-        </Link>
-      </div>
-      <div className={styles.snsIcon}>
-        <Link href='https://twitter.com/uchikoshifes' alia-label='公式Twitter'>
-          <span className={styles.twitter}>
-            <BsTwitter />
-          </span>
-          <div tabIndex={0} className={styles['visually-hidden']}>
-            <span>Twitter</span>
-          </div>
-        </Link>
-      </div>
-      <div className={styles.snsIcon}>
-        <Link href='https://instagram.com/uchikoshifes' alia-label='公式Instagram'>
-          <span className={styles.instagram}>
-            <BsInstagram />
-          </span>
-          <div tabIndex={0} className={styles['visually-hidden']}>
-            <span>Instagram</span>
-          </div>
-        </Link>
-      </div>
+        </div>
+      ))}
     </div>
   )
 }
@@ -159,16 +123,14 @@ const Top = () => {
         loading='eager'
       />
       <div className={styles['top-contents']}>
-        <div className={styles.objectStyle}>
-          <object
-            title='カイカ宣言'
-            type='image/svg+xml'
-            data='kaika-sengen.svg'
-            width='300'
-            height='200'
-            className={styles['kaika-sengen']}
-          ></object>
-        </div>
+        <object
+          title='カイカ宣言'
+          type='image/svg+xml'
+          data='kaika-sengen.svg'
+          width='300'
+          height='200'
+          className={styles['kaika-sengen']}
+        ></object>
         <motion.div
           className={styles.titleContainer}
           initial={{ opacity: 0.001 }}
@@ -243,9 +205,7 @@ const GoogleMaps = () => {
         loading='lazy'
         referrerPolicy='no-referrer-when-downgrade'
         title='浅野中学校・高等学校周辺の地図'
-      >
-        ロード中...
-      </iframe>
+      ></iframe>
     </div>
   )
 }

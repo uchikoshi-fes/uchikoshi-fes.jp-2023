@@ -8,11 +8,11 @@ import styles from './menu.module.scss'
 const links = [
   { href: '/', name: 'トップ' },
   { href: '/orgs', name: '団体一覧' },
-  { href: '/map', name: '校内マップ' },
-  { href: '/events', name: 'イベント' },
-  { href: '/radio', name: 'アサノラジオ' },
-  { href: '/articles', name: '記事' },
-  { href: '/q&a', name: 'Q&A' },
+  // { href: '/map', name: '校内マップ' },
+  // { href: '/events', name: 'イベント' },
+  // { href: '/radio', name: 'アサノラジオ' },
+  // { href: '/articles', name: '記事' },
+  { href: '/faq', name: 'Q&A' },
 ]
 
 const MenuLinks = ({ narrow = false }: { narrow?: boolean }) => {
@@ -20,8 +20,7 @@ const MenuLinks = ({ narrow = false }: { narrow?: boolean }) => {
 
   return (
     <ul>
-      {links.map(({ href, name /*color*/ }: { href: string; name: string }) => {
-        console.log(pathname)
+      {links.map(({ href, name }: { href: string; name: string }) => {
         // 現在のページがこのリンク以下の場合は active にする
         let className
         if (href === '/' ? pathname === href : pathname !== null && pathname.startsWith(href)) {

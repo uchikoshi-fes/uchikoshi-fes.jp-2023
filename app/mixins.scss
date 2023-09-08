@@ -7,6 +7,13 @@
   padding-right: 1rem;
 }
 
+@mixin vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
 // [Breakpoints](https://getbootstrap.jp/docs/5.0/layout/breakpoints/)
 
 // X-Small devices (portrait phones, less than 576px)

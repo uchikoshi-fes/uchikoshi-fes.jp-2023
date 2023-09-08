@@ -1,0 +1,176 @@
+@use '@mixins' as *;
+@use '@variables' as *;
+//@use '@components/layout/header.module' as header;
+
+.icon-left {
+  margin-right: 0.5rem;
+}
+
+.orgs {
+  width: 100%;
+  padding: 1rem max(10%, 50% - 600px);
+
+  > h1 {
+    letter-spacing: 0.1rem;
+    position: relative;
+    padding-left: 30px;
+    margin: 50px 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.organizations-window {
+  position: relative;
+  box-shadow: 0 0 4px 2px $color-darker;
+
+  > div {
+    height: auto;
+    width: 100%;
+    overflow: auto;
+  }
+}
+
+.categories {
+  position: sticky;
+  min-height: 4rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  display: flex;
+  overflow-x: auto;
+  list-style: none;
+  z-index: 1;
+  background-color: $color-gray;
+
+  > li {
+    flex: auto;
+
+    &:not(.active) {
+      box-shadow: 0 -4px 4px -2px $color-darker inset;
+    }
+
+    > button {
+      height: 100%;
+      width: 100%;
+      border: none;
+
+      &:hover {
+        background-color: rgba($color-darker, 0.2);
+      }
+    }
+  }
+}
+
+.category-全て {
+  background-color: $color-white;
+  color: $color-darker;
+}
+
+.category-展示 {
+  background-color: $color-red;
+  color: $color-white;
+}
+
+.category-喫茶 {
+  background-color: $color-purple;
+  color: $color-white;
+}
+
+.category-屋台 {
+  background-color: $color-yellow;
+  color: $color-darker;
+}
+
+.category-公演 {
+  background-color: $color-blue;
+  color: $color-white;
+}
+
+.category-アミューズメント {
+  background-color: $color-green;
+  color: $color-white;
+}
+
+.category-販売 {
+  background-color: rgba($color-darker, 0.8);
+  color: $color-white;
+}
+
+.active {
+  box-shadow: 0 0 4px 2px $color-darker;
+}
+
+.category-narrow {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.organizations {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    &:nth-child(odd) {
+      background-color: rgba($color-darker, 0.1);
+    }
+
+    :hover {
+      background-color: rgba($color-darker, 0.2);
+    }
+
+    > a {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      text-decoration: none;
+      gap: 1rem;
+
+      > div:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.logo {
+  position: relative;
+  height: 80px;
+  width: 80px;
+}
+
+.title {
+  flex: 2;
+  font-size: 1.2rem;
+}
+
+.other-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  > div:hover {
+    background-color: transparent;
+  }
+}
+
+.area {
+  flex: 1;
+}
+
+.room {
+  flex: 1;
+}
+
+.name {
+  flex: 1;
+}
