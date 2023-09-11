@@ -119,12 +119,12 @@ const Countdown = () => {
           }
           // 文化祭開始前
           return (
-            <div>
+            <p>
               <div className={styles.left}>{fes.name}開会まで</div>
               <br />
               <Remaining start={fes.start} now={now} />
               <span className={styles.small}>&#xff01;</span>
-            </div>
+            </p>
           )
         })()
       )}
