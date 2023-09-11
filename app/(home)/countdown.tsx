@@ -42,15 +42,14 @@ const Counter = ({ unit, children }: { unit: string; children: ReactNode }) => {
 
 const Remaining = ({ start, now }: { start: number; now: number }) => {
   const remaining = {
+    days: Math.floor((start - now) / 86400000),
     hours: Math.floor((start - now) / 3600000),
     minutes: Math.floor((start - now) / 60000),
     seconds: Math.floor((start - now) / 1000),
   }
   return (
     <>
-      <Counter unit='日'>
-        {Math.ceil((new Date(start).setHours(0, 0, 0, 0) - now) / 86400000)}
-      </Counter>
+      <Counter unit='日'>{padZero(remaining.days)}</Counter>
       <Counter unit='時間'>{padZero(remaining.hours % 24)}</Counter>
       <br />
       <Counter unit='分'>{padZero(remaining.minutes % 60)}</Counter>
