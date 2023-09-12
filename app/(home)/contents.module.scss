@@ -82,6 +82,9 @@
 
 .titleContainer {
   width: 100vw;
+  abbr {
+    text-decoration: none;
+  }
   %top-text {
     letter-spacing: 0.2rem;
     margin: 0;
