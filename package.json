@@ -2,6 +2,12 @@
   "name": "uchikoshi-fes.jp-2023",
   "version": "1.0.4",
   "private": true,
+  "license": "MIT",
+  "contributors": [
+    "ryo-ha",
+    "gendaineko2222",
+    "EdamAme"
+  ],
   "browser": {
     "fs": false
   },
