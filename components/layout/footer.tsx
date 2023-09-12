@@ -58,7 +58,7 @@ const Others = () => {
 }
 
 const Copyright = () => {
-  return <div className={styles.copyright}>v{PACKAGE.version} &copy; 浅野学園生徒会 2023</div>
+  return <div className={styles.copyright}>v{PACKAGE.version} &copy; 2023 浅野学園生徒会</div>
 }
 
 const Footer = () => {
