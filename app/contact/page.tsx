@@ -35,5 +35,4 @@ const Contact = () => {
   )
 }
 
-export { E_MAIL_ADDRESS, EMail }
 export default Contact
