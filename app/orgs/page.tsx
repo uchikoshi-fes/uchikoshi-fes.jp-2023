@@ -1,3 +1,4 @@
+import Link from '@components/common/link'
 import { fetchOrganizations } from './fetch'
 import OrgDats from './orgs-data'
 import styles from './page.module.scss'
@@ -15,6 +16,11 @@ const Organizations = async () => {
         <p>
           カテゴリーごとにタブが分かれています。<></>
           タブをクリックすると、そのカテゴリーの団体のみが表示されます。
+          また、団体名をクリックすると、その団体の詳細ページに移動します。
+          <br />
+          喫茶店、屋台のメニュー表は
+          <Link href='menus'>こちら</Link>
+          からご覧ください。
         </p>
         <div className={styles['organizations-window']}>
           <div>
