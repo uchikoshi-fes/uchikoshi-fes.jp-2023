@@ -111,5 +111,4 @@ const getStaticProps = async () => {
   return { packages, thisPackage }
 }
 
-export { getStaticProps }
 export default Licenses
