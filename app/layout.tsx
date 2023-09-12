@@ -1,5 +1,6 @@
 import './globals.scss'
 import { Noto_Sans_JP } from 'next/font/google'
+import styles from './layout.module.scss'
 import Footer from 'components/layout/footer'
 import Header from 'components/layout/header'
 
@@ -18,9 +19,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='ja' className={notoSansJp.variable}>
-      <body>
+      <body className={styles.layout}>
         <Header></Header>
-        {children}
+        <div className={styles.main}>{children}</div>
         <Footer></Footer>
       </body>
     </html>

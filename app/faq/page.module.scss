@@ -1,11 +1,8 @@
 @use '@variables' as *;
 @use '@mixins' as *;
-@use '@components/layout/header.module' as header;
 
 .faq {
-  width: 100%;
-  padding: header.$header-height max(10%, 50% - 600px);
-  min-height: 90vh;
+  @include outermost-container;
 
   > h1 {
     border-left: 5px solid $color-red;

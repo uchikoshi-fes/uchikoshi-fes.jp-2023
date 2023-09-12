@@ -1,6 +1,5 @@
 @use '@mixins' as *;
 @use '@variables' as *;
-@use '@components/layout/header.module' as header;
 
 .license-name {
   font-weight: bold;
@@ -21,8 +20,7 @@
 }
 
 .licenses {
-  width: 100%;
-  padding: header.$header-height max(10%, 50% - 600px);
+  @include outermost-container;
 
   > h1 {
     letter-spacing: 0.1rem;

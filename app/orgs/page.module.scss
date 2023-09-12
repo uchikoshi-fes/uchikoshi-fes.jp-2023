@@ -1,14 +1,12 @@
 @use '@mixins' as *;
 @use '@variables' as *;
-//@use '@components/layout/header.module' as header;
 
 .icon-left {
   margin-right: 0.5rem;
 }
 
 .orgs {
-  width: 100%;
-  padding: 1rem max(10%, 50% - 600px);
+  @include outermost-container;
 
   > h1 {
     letter-spacing: 0.1rem;
