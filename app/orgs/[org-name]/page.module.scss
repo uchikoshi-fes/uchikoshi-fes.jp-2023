@@ -1,10 +1,8 @@
 @use '@mixins' as *;
 @use '@variables' as *;
-@use '@components/layout/header.module.scss' as header;
 
 .organization {
-  width: 100%;
-  padding: header.$header-height max(10%, 50% - 600px);
+  @include outermost-container;
 }
 
 .info {

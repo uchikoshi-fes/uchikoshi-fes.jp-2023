@@ -2,13 +2,19 @@
   "name": "uchikoshi-fes.jp-2023",
   "version": "1.1.0",
   "private": true,
+  "license": "MIT",
+  "contributors": [
+    "ryo-ha",
+    "gendaineko2222",
+    "EdamAme"
+  ],
   "browser": {
     "fs": false
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "pnpm run license && next dev",
+    "build": "pnpm run license && next build",
     "start": "next start",
     "lint": "run-p lint:*",
     "lintfix": "run-s --continue-on-error lint:*:fix",
@@ -17,6 +23,7 @@
     "lint:text": "textlint --cache .",
     "lint:text:fix": "textlint --cache --fix .",
     "lint:text:dry-run": "textlint --cache --fix --dry-run --format diff .",
+    "license": "license-checker-rseidelsohn --excludePrivatePackages --json --production --out licenses.json",
     "prepare": "node -e \"if (process.env.NODE_ENV !== 'production'){process.exit(1)} \" || husky install"
   },
   "dependencies": {
@@ -31,6 +38,7 @@
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
     "framer-motion": "^10.12.18",
+    "license-checker-rseidelsohn": "^4.2.6",
     "next": "13.4.13",
     "react": "18.2.0",
     "react-dom": "18.2.0",

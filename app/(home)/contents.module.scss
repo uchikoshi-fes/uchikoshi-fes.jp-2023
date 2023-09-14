@@ -1,5 +1,6 @@
 @use '@variables' as *;
 @use '@mixins' as *;
+@use '@components/layout/header.module' as header;
 
 .topColor {
   background-color: $color-white;
@@ -60,6 +61,7 @@
   align-items: flex-start;
   color: $color-white;
   text-shadow: $color-gray 1px 1px;
+  margin-top: -(header.$header-height);
 
   .top-background-img {
     position: absolute;
@@ -82,6 +84,9 @@
 
 .titleContainer {
   width: 100vw;
+  abbr {
+    text-decoration: none;
+  }
   %top-text {
     letter-spacing: 0.2rem;
     margin: 0;

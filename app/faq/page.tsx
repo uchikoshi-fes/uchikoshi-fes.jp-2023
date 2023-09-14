@@ -1,4 +1,6 @@
+import Link from '@components/common/link'
 import styles from './page.module.scss'
+
 export default function Faq() {
   return (
     <div className={styles.faq}>
@@ -23,6 +25,11 @@ export default function Faq() {
           </p>
         </li>
       </ul>
+      <p>
+        このほかに、質問やご意見のある場合はこちらをご覧ください。
+        <br />
+        <Link href='/contact'>お問い合わせ</Link>
+      </p>
     </div>
   )
 }

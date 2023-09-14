@@ -1,7 +1,7 @@
 @use '@variables' as *;
 @use '@mixins' as *;
 
-.faq {
+.menus {
   @include outermost-container;
 
   > h1 {

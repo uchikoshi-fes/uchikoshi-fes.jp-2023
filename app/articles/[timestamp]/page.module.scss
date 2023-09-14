@@ -1,0 +1,22 @@
+@use '@mixins' as *;
+@use '@variables' as *;
+
+.Interview {
+  width: 80%;
+  @include outermost-container;
+
+  h1 {
+    word-break: keep-all;
+  }
+  .description {
+    padding: 0.25rem 1rem;
+
+    h2 {
+      margin: 1rem 0;
+      border-left: 8px solid $color-red;
+      padding: 0.5rem 1rem;
+      word-break: keep-all;
+      background-color: rgba($color-white, 0.25);
+    }
+  }
+}
