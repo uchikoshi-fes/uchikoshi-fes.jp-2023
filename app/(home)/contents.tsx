@@ -124,13 +124,19 @@ const Top = () => {
       />
       <div className={styles['top-contents']}>
         <object
+          name='カイカ宣言'
           title='カイカ宣言'
           type='image/svg+xml'
           data='kaika-sengen.svg'
           width='300'
           height='200'
           className={styles['kaika-sengen']}
-        ></object>
+        >
+          <p>カイカ宣言</p>
+        </object>
+        <div tabIndex={0} className={styles['visually-hidden']}>
+          <span>カイカ宣言</span>
+        </div>
         <motion.div
           className={styles.titleContainer}
           initial={{ opacity: 0.001 }}
@@ -142,7 +148,9 @@ const Top = () => {
           }}
         >
           <h1 className={styles.title}>打越祭</h1>
-          <p className={styles.date}>9/17・9/18</p>
+          <abbr title='9月17日・日曜日と9月18日・月曜日（祝日）の二日間で開催'>
+            <p className={styles.date}>9/17・9/18</p>
+          </abbr>
           <p className={styles['no-rsv-no-lim']}>予約不要・人数制限なし</p>
           <Sns />
         </motion.div>

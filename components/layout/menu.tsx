@@ -8,10 +8,9 @@ import styles from './menu.module.scss'
 const links = [
   { href: '/', name: 'トップ' },
   { href: '/orgs', name: '団体一覧' },
-  // { href: '/map', name: '校内マップ' },
-  // { href: '/events', name: 'イベント' },
-  // { href: '/radio', name: 'アサノラジオ' },
-  // { href: '/articles', name: '記事' },
+  { href: '/events', name: 'イベント' },
+  { href: '/radio', name: 'アサノラジオ' },
+  { href: '/articles', name: '記事' },
   { href: '/faq', name: 'Q&A' },
 ]
 

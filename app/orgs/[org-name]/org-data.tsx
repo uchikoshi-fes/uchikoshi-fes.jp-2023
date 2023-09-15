@@ -77,8 +77,15 @@ const OrgData = (props: any) => {
             <Description />
           </MDXProvider>
         </div>
+        {prop.genre === '喫茶' || prop.genre === '屋台' ? (
+          <div className={styles.menu}>
+            <p>
+              喫茶店や屋台のメニューは <Link href='/menus'>こちら</Link> をご覧ください。
+            </p>
+          </div>
+        ) : null}
         <div className={styles.back}>
-          <Link href={`/orgs?category=${prop.categoryId}`}>参加団体一覧へ戻る</Link>
+          <Link href={`/orgs?category=${prop.genre}`}>参加団体一覧へ戻る</Link>
         </div>
       </article>
     </>
