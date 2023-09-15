@@ -67,7 +67,7 @@ const Licenses = async () => {
         <h1>ライセンス</h1>
         <p>
           本サイトのコンテンツ及び
-          <Link href='https://github.com/uchikoshi-fes/uchikoshi-fes.jp-2022'>ソースコード</Link>は
+          <Link href='https://github.com/uchikoshi-fes/uchikoshi-fes.jp-2023'>ソースコード</Link>は
           <span className={styles['license-name']}>
             <> {thisPackage?.licenses} </>
           </span>
