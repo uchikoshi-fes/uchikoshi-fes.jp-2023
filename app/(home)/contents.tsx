@@ -186,7 +186,6 @@ const Overview = () => {
           <li>
             <p className={styles.subheading}>日程</p>
             <p>9月17日（日）・18日（月 ・祝 ）</p>
-            <p>9時開始・16時展示終了・17時イベント終了</p>
           </li>
           <li>
             <p className={styles.subheading}>場所</p>
