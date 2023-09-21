@@ -12,6 +12,7 @@ const links = [
   { href: '/radio', name: 'アサノラジオ' },
   { href: '/articles', name: '記事' },
   { href: '/faq', name: 'Q&A' },
+  { href: '/collaboration', name: 'コラボ' },
 ]
 
 const MenuLinks = ({ narrow = false }: { narrow?: boolean }) => {
