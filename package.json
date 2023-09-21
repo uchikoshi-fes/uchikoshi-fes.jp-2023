@@ -47,6 +47,7 @@
     "react-player": "^2.12.0",
     "sanitize.css": "^13.0.0",
     "sass": "^1.62.1",
+    "sharp": "^0.32.6",
     "typescript": "5.0.4"
   },
   "devDependencies": {
