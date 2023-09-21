@@ -1,0 +1,36 @@
+@use '@mixins' as *;
+@use '@variables' as *;
+
+.collaboration {
+  background-color: $color-komafes;
+  @include outermost-container;
+
+  .top-content {
+    margin: 4rem 0;
+  }
+
+  > h1 {
+    @include page-title;
+  }
+  ul {
+    list-style: none;
+
+    li {
+      margin: 4rem 0;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      h2 {
+        border-left: 5px solid $color-red;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+.player {
+  aspect-ratio: 16/ 9;
+}
