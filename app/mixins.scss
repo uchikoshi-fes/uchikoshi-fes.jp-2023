@@ -56,9 +56,19 @@
   min-height: 90vh;
   width: 100%;
   padding: 1rem max(10%, 50% - 600px);
+
+  > h1 {
+    @include page-title();
+  }
+
+  h2 {
+    border-left: 5px solid $color-red;
+    padding-left: 10px;
+  }
 }
 
 @mixin page-title {
+  border-left: 5px solid $color-red;
   letter-spacing: 0.1rem;
   position: relative;
   padding-left: 30px;
