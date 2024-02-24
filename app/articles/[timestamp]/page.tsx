@@ -8,8 +8,6 @@ export async function generateStaticParams() {
 }
 const Interview = async ({ params }: { params: { timestamp: string } }) => {
   const decoded = decodeURIComponent(params['timestamp'])
-  console.log('Interview--')
-  console.log(decoded)
   const Interviews = await fetchInterview(decoded)
   return <InterviewData props={Interviews} />
 }

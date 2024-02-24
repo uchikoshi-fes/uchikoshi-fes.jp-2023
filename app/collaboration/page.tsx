@@ -1,12 +1,14 @@
 'use client'
-import Image from 'next/image'
+
 import React from 'react'
 import ReactPlayer from 'react-player'
+import Image from '@components/common/image'
 import Link from '@components/common/link'
 import styles from './page.module.scss'
 import useClient from 'hooks/client'
 import collaboImg from 'public/collabo.png'
-import komatoLine from 'public/komato-line.jpg'
+import komatoLine from 'public/komato-line.png'
+
 
 export default function Page() {
   const isClient = useClient()
@@ -32,7 +34,11 @@ export default function Page() {
         <li>
           <h2>駒場東邦文化祭 公式LINE</h2>
           <Link href='https://lin.ee/2X0uXb1'>
-            <Image src={komatoLine} alt='駒場東邦文化祭公式ライン QRコード'></Image>
+            <Image
+              src={komatoLine}
+              alt='駒場東邦文化祭公式ライン QRコード'
+              style={{ width: '540px', 'max-width': '100%', height: 'auto' }}
+            ></Image>
             <p>https://lin.ee/2X0uXb1</p>
           </Link>
         </li>

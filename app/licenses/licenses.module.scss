@@ -21,26 +21,4 @@
 
 .licenses {
   @include outermost-container;
-
-  > h1 {
-    letter-spacing: 0.1rem;
-    position: relative;
-    padding-left: 30px;
-    margin: 50px 0;
-
-    @include sm {
-      font-size: 28px;
-      margin: 20px 0 40px;
-    }
-
-    &::before {
-      content: '';
-      width: 5px;
-      height: 100%;
-      background-color: $color-red;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  }
 }

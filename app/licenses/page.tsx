@@ -91,7 +91,6 @@ const getStaticProps = async () => {
     contributors: PACKAGE?.contributors ?? [],
   }
 
-  console.log(thisPackage)
   const packages = []
   for (const [pkgName, pkg] of Object.entries(LICENSES)) {
     packages.push({

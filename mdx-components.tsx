@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from '@components/common/image'
 import Link from '@components/common/link'
 import type { MDXComponents } from 'mdx/types'
 // This file is required to use MDX in `app` directory.

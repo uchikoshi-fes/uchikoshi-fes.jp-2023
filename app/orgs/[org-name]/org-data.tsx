@@ -1,8 +1,8 @@
 'use client'
 import dynamic from 'next/dynamic'
-import Image from 'next/image'
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
+import Image from '@components/common/image'
 //import { NextSeo } from 'next-seo'
 import Link from '@components/common/link'
 import { CATEGORIES, AREAS } from '../categories'
@@ -11,10 +11,6 @@ import styles from './page.module.scss'
 
 const OrgData = (props: any) => {
   const prop = props.props
-  console.log('OrganizationData')
-  console.log(prop)
-  console.log(prop.name)
-  console.log(Object.keys(prop))
   const Description = dynamic(() => fetchOrganizationDescription(prop.name), {
     loading: () => <div className={styles['description-loading']}>(読込中...)</div>,
     ssr: false,

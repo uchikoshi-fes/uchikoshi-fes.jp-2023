@@ -9,8 +9,6 @@ export async function generateStaticParams() {
 }
 const Organization = async ({ params }: { params: { 'org-name': string } }) => {
   const decoded = decodeURIComponent(params['org-name'])
-  console.log('Organization--')
-  console.log(decoded)
   const organizations = await fetchOrganization(decoded)
   return <OrgData props={organizations} />
 }

@@ -4,10 +4,7 @@ import OrgDats from './orgs-data'
 import styles from './page.module.scss'
 
 const Organizations = async () => {
-  console.log('Fetching organizations')
   const organizations = await fetchOrganizations()
-  console.log('Organizations')
-  console.log(organizations)
   return (
     <>
       {/* <NextSeo title='団体一覧' openGraph={{ title: '参加団体一覧' }} /> */}

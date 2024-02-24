@@ -2,35 +2,29 @@
 @use '@mixins' as *;
 @use '@components/layout/header.module' as header;
 
-.topColor {
-  background-color: $color-white;
-  color: $color-gray;
+@mixin color-transition($background-color, $character-color) {
+  background-color: $background-color;
+  color: $character-color;
   transition: all 1s ease-out;
+}
+
+.topColor {
+  @include color-transition($color-white, $color-gray);
 }
 .sloganColor {
-  background-color: $color-red;
-  color: $color-white;
-  transition: all 1s ease-out;
+  @include color-transition($color-red, $color-white);
 }
 .countdownColor {
-  background-color: $color-purple;
-  color: $color-white;
-  transition: all 1s ease-out;
+  @include color-transition($color-purple, $color-white);
 }
 .pvColor {
-  background-color: $color-green;
-  color: $color-white;
-  transition: all 1s ease-out;
+  @include color-transition($color-green, $color-white);
 }
 .overviewColor {
-  background-color: $color-blue;
-  color: $color-white;
-  transition: all 1s ease-out;
+  @include color-transition($color-blue, $color-white);
 }
 .accessColor {
-  background-color: $color-yellow;
-  color: $color-darker;
-  transition: all 1s ease-out;
+  @include color-transition($color-yellow, $color-darker);
 }
 .content {
   height: auto;
@@ -202,24 +196,28 @@
   height: 80vh;
   min-height: 600px;
   font-family: serif;
-  .detail {
+
+  > .detail {
     @include vertical;
   }
-  li {
-    list-style: none;
-    @include vertical;
-    align-items: center;
-  }
+
   ul {
     @include vertical;
     align-items: center;
     padding: 0;
     line-height: 1.1;
-  }
-  .subheading {
-    font-size: 1.2rem;
-    margin: 15px 0 0 2px;
-    text-decoration: underline;
+
+    > li {
+      list-style: none;
+      @include vertical;
+      align-items: center;
+
+      > .subheading {
+        font-size: 1.2rem;
+        margin: 15px 0 0 2px;
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -244,34 +242,36 @@
 }
 
 .access-content {
-  ul {
-    padding: 0;
+  > ul {
+    padding: 0 0 20px;
     padding-inline-start: 0;
-  }
 
-  li {
-    list-style: none;
-  }
+    > li {
+      padding: 10px 0px;
+      list-style: none;
 
-  p {
-    margin: 5px 0;
-    font-family: var(--font-noto-sans-jp);
-  }
-  .access-content-title {
-    letter-spacing: 0.1rem;
-    position: relative;
+      > p {
+        margin: 5px 0;
+        font-family: var(--font-noto-sans-jp);
+      }
 
-    &::before {
-      content: '';
-      width: 10px;
-      height: 1px;
-      position: absolute;
-      top: 50%;
-      left: 0;
+      > .access-content-title {
+        letter-spacing: 0.1rem;
+        position: relative;
+
+        &::before {
+          content: '';
+          width: 10px;
+          height: 1px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+        }
+      }
+
+      > .route-button {
+        margin: 30px 0 0;
+      }
     }
-  }
-
-  .route-button {
-    margin: 30px 0 0;
   }
 }

@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from '@components/common/image'
 import styles from './menus.module.scss'
 import cafeMenus from 'public/cafe-menus.jpg'
 import yataiMenus from 'public/yatai-menus.jpg'
