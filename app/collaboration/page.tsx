@@ -1,4 +1,5 @@
 'use client'
+
 import React from 'react'
 import ReactPlayer from 'react-player'
 import Image from '@components/common/image'
@@ -7,6 +8,7 @@ import styles from './page.module.scss'
 import useClient from 'hooks/client'
 import collaboImg from 'public/collabo.png'
 import komatoLine from 'public/komato-line.png'
+
 
 export default function Page() {
   const isClient = useClient()
