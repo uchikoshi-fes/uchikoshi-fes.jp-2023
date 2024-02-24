@@ -1,7 +1,7 @@
 'use client'
-import Image from 'next/image'
 import React from 'react'
 import ReactPlayer from 'react-player'
+import Image from '@components/common/image'
 import Link from '@components/common/link'
 import styles from './page.module.scss'
 import useClient from 'hooks/client'
