@@ -17,8 +17,6 @@ export default function Page() {
         <Image
           src={collaboImg}
           alt='KOMAFES 翔 × Uchikoshi-Fes カイカ宣言'
-          width='1920'
-          height='1080'
           style={{ width: '100%', height: 'auto' }}
         ></Image>
         <p>
@@ -34,12 +32,7 @@ export default function Page() {
         <li>
           <h2>駒場東邦文化祭 公式LINE</h2>
           <Link href='https://lin.ee/2X0uXb1'>
-            <Image
-              src={komatoLine}
-              alt='駒場東邦文化祭公式ライン QRコード'
-              width='540'
-              height='540'
-            ></Image>
+            <Image src={komatoLine} alt='駒場東邦文化祭公式ライン QRコード'></Image>
             <p>https://lin.ee/2X0uXb1</p>
           </Link>
         </li>
