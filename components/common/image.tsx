@@ -14,7 +14,7 @@ const imgixLoader = ({
   width: number | string
   quality?: number | string
 }) => {
-  console.log(src)
+  // console.log(src)
   if (typeof src !== 'string') {
     console.log(src.width)
     src = src.src
@@ -52,7 +52,7 @@ const Image = ({
   layout?: 'responsive' | 'fill' | 'fixed'
   objectFit?: 'fill' | 'contain' | 'cover'
 }) => {
-  console.log(src)
+  // console.log(src)
   return (
     <NextImage
       src={src}

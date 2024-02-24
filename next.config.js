@@ -3,8 +3,7 @@ let nextConfig = {
   output: 'export',
 }
 nextConfig =
-  false
-  // process.env.CF_PAGES_BRANCH === 'main'
+  process.env.CF_PAGES_BRANCH === 'main'
     ? {
         ...nextConfig,
         env: { isProduct: true },

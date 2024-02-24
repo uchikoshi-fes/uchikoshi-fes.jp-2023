@@ -1,14 +1,10 @@
 import fs from 'fs'
 const fileSystem = fs
 const importOrganization = async (name: string) => {
-  console.log('importOrganization')
-  console.log(name)
   return await import(`public/data/orgs/${name}/index.mdx`)
 }
 
 const fetchOrganizationMeta = async (name: string) => {
-  console.log('fetchOrganizationMeta')
-  console.log(name)
   return (await importOrganization(name)).META
 }
 
@@ -22,14 +18,10 @@ const fetchOrganizationLogo = async (name: string) => {
 }
 
 const fetchOrganizationDescription = async (name: string) => {
-  console.log('fetchOrganizationDescription')
-  console.log(name)
   return (await importOrganization(name)).default
 }
 
 const fetchOrganization = async (name: string) => {
-  console.log('fetchOrganization')
-  console.log(name)
   const organization = {
     name,
     logo: '',
@@ -61,8 +53,6 @@ const fetchOrganizations = async () => {
   )
     .filter((dirent) => !dirent.isFile())
     .map((dirent) => dirent.name)
-  console.log('fetchOrganizations')
-  console.log(organizationIds)
   // それぞれの団体の情報を非同期に取得
   const organizations = await Promise.all(organizationIds.map(fetchOrganization))
   const org = organizations.splice(45, 1)

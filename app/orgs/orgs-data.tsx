@@ -21,8 +21,6 @@ const OrgDats = ({
     'parent org': string
   }[]
 }) => {
-  console.log('OrgDatas')
-  console.log(organizations)
   const isNarrow = useSmallerThan({ width: 800 })
   const isWide = !isNarrow //useMediaQuery({ query: '(min-width: 800px)' })
   const isClient = useClient()
@@ -35,7 +33,6 @@ const OrgDats = ({
       let category = searchParams.get('category')
       if (category) category = decodeURI(category)
       else category = CATEGORIES[0].name
-      console.log('category: ' + category)
       if (CATEGORIES.some(({ name }) => name === category) && category) {
         setCategoryId(category)
       }
