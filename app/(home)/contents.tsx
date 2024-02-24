@@ -1,13 +1,14 @@
 'use client'
-import Image from 'next/image'
 import { useState, ReactNode, useRef, useEffect } from 'react'
 import { useInView, motion } from 'framer-motion'
 import { FaChevronRight } from 'react-icons/fa'
+import Image from '@components/common/image'
 import Link from '@components/common/link'
 import officialLinks from '@components/layout/social-media-links'
 import styles from './contents.module.scss'
 import Countdown from './countdown'
 import PromotionVideos from './promotion-videos'
+import topImage from 'public/top-background-img.jpg'
 
 const Contents = () => {
   const contentsList = [
@@ -115,12 +116,11 @@ const Top = () => {
   return (
     <div className={styles.top}>
       <Image
-        src='top-background-img.jpg'
+        src={topImage}
         alt='浅野の校舎の画像'
         className={styles['top-background-img']}
-        width={2048}
-        height={1536}
         loading='eager'
+        style={{ height: '100vh', width: '100vw' }}
       />
       <div className={styles['top-contents']}>
         <object

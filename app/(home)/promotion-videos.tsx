@@ -1,8 +1,8 @@
-import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { FaRegWindowClose, FaRegPlayCircle } from 'react-icons/fa'
 import Modal from 'react-modal'
 import ReactPlayer from 'react-player'
+import Image from '@components/common/image'
 import styles from './promotion-videos.module.scss'
 
 const PV_ALL = [

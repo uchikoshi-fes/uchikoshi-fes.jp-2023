@@ -1,7 +1,7 @@
 'use client'
-import Image from 'next/image'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
+import Image from '@components/common/image'
 import Link from '@components/common/link'
 import { CATEGORIES } from './categories'
 import styles from './page.module.scss'
