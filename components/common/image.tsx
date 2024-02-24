@@ -1,3 +1,4 @@
+'use client'
 import NextImage, { StaticImageData } from 'next/image'
 
 const customLoader = ({ src }: { src: string }) => {
