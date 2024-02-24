@@ -13,7 +13,7 @@ $easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
   width: 100%;
   padding: 1rem max(10%, 50% - 500px);
   @include xs {
-    grid-template-rows: 45% 45% 10%;
+    grid-template-rows: 35% 60% 5%;
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
     padding: 1rem max(10%, 50% - 600px);
